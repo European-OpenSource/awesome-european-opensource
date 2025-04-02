@@ -1,0 +1,18 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jetify-com/devbox/0.14.0/.schema/devbox.schema.json",
+  "packages": ["python@3.12"],
+  "env": {},
+  "include": [],
+  "shell": {
+    "init_hook": ["devbox run setup", ". ${DEVBOX_PROJECT_ROOT}/.activate"],
+    "scripts": {
+      "lint": ["uv run pre-commit run --all-files"],
+      "setup": [
+        "uv venv --python 3.12",
+        "uv sync --all-extras",
+        "uv run pre-commit install",
+        "devbox run lint"
+      ]
+    }
+  }
+}
