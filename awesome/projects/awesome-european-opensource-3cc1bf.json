@@ -1,0 +1,22 @@
+{
+  "name": "Awesome European OpenSource",
+  "category": "awesome-list",
+  "country": "Italy",
+  "description": "Italia Open-Source is not just a data collection platform, but a project everyone can participate in to discover and enhance Italian open-source projects",
+  "source": {
+    "platform": "GitHub",
+    "url_repository": "https://github.com/European-OpenSource/awesome-european-opensource",
+    "license": "GPL-3.0",
+    "language": "Python"
+  },
+  "metadata": {
+    "filename": "awesome-european-opensource-3cc1bf.json",
+    "filepath": "/Users/fabrizio.cafolla/projects/european-opensource/awesome-european-opensource/awesome/projects/awesome-european-opensource-3cc1bf.json",
+    "created_at": "2025-09-27T10:53:07Z"
+  },
+  "owner": {
+    "type": "community",
+    "name": "European OpenSource",
+    "url_website": "http://europeanopensource.eu"
+  }
+}
