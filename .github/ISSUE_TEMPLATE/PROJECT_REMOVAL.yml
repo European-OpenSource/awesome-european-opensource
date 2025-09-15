@@ -1,0 +1,44 @@
+name: 🗑️ Project Removal Request
+description: Request to remove a project from the awesome list
+title: "🗑️ [REMOVAL] - <title>"
+labels: ["awesome: removal"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Project Removal Request
+        Thank you for submitting a removal request. Please fill out the required information below.
+
+  - type: input
+    id: project_name
+    attributes:
+      label: Project Name
+      description: The name of the project you want to remove from the list
+      placeholder: e.g., my-awesome-project
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: ownership_confirmation
+    attributes:
+      label: Ownership Confirmation
+      description: You must confirm that you have the authority to request this removal
+      options:
+        - label: I am the project owner or have decision-making authority over this project
+          required: true
+
+  - type: textarea
+    id: reason
+    attributes:
+      label: Reason for Removal (Optional)
+      description: Please explain why you want to remove this project from the list
+      placeholder: Tell us why you want this project removed...
+    validations:
+      required: false
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        ### Next Steps
+        After submitting this request, a maintainer will review it and process the removal if all requirements are met.

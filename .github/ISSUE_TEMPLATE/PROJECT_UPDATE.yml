@@ -1,0 +1,413 @@
+name: ✏️ Project Update Request
+description: Request to update information about a project in the awesome list
+title: "[UPDATE] - <title>"
+labels: ["awesome: update"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Project Update Request
+        Request changes to an existing project in the list. Fill in only the fields you want to update.
+
+  - type: input
+    id: project_name
+    attributes:
+      label: Project Name
+      description: The current name of the project to update (required to identify the project)
+      placeholder: e.g., my-awesome-project
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        ### Basic Information
+        Update any of the following fields as needed:
+
+  - type: input
+    id: new_name
+    attributes:
+      label: New Project Name
+      description: If you want to change the project name
+      placeholder: Leave empty to keep current name
+    validations:
+      required: false
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: A brief description of the project (max 256 characters)
+      placeholder: What does this project do?
+    validations:
+      required: false
+
+  - type: dropdown
+    id: country
+    attributes:
+      label: Country
+      description: The country where the project originates
+      options:
+        - Italy
+        - France
+        - Germany
+        - Spain
+        - Poland
+        - Netherlands
+        - Belgium
+        - Sweden
+        - Austria
+        - Czech Republic
+        - Denmark
+        - Finland
+        - Greece
+        - Hungary
+        - Ireland
+        - Croatia
+        - Lithuania
+        - Latvia
+        - Slovakia
+        - Slovenia
+        - Estonia
+        - Portugal
+        - Bulgaria
+        - Romania
+        - Luxembourg
+        - Malta
+        - Cyprus
+    validations:
+      required: false
+
+  - type: input
+    id: tags
+    attributes:
+      label: Tags
+      description: Comma-separated tags (1-10 tags, max 24 characters each)
+      placeholder: e.g., web, backend, api, database
+    validations:
+      required: false
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      description: The project category
+      options:
+        - app
+        - saas
+        - paas
+        - faas
+        - package
+        - library
+        - learning
+        - language
+        - framework
+        - cli
+        - api
+        - scripts
+        - ai
+        - awesome-list
+        - os
+        - other
+    validations:
+      required: false
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        ### Source Information
+
+  - type: dropdown
+    id: source_platform
+    attributes:
+      label: Source Platform
+      description: Where the source code is hosted
+      options:
+        - GitHub
+        - GitLab
+        - Bitbucket
+        - Gitea
+        - Codeberg
+        - Other
+    validations:
+      required: false
+
+  - type: input
+    id: source_url_repository
+    attributes:
+      label: Repository URL
+      description: URL to the source code repository
+      placeholder: https://github.com/username/repo
+    validations:
+      required: false
+
+  - type: input
+    id: source_url_documentation
+    attributes:
+      label: Documentation URL
+      description: URL to the project documentation
+      placeholder: https://docs.example.com
+    validations:
+      required: false
+
+  - type: dropdown
+    id: source_license
+    attributes:
+      label: License
+      description: The project license
+      options:
+        - Source-available
+        - 0BSD
+        - BSD-1-Clause
+        - BSD-2-Clause
+        - BSD-3-Clause
+        - AFL-3.0
+        - APL-1.0
+        - Apache-1.1
+        - Apache-2.0
+        - APSL-2.0
+        - Artistic-1.0
+        - Artistic-2.0
+        - AAL
+        - BSL-1.0
+        - 3-clause BSD License
+        - 2-clause BSD License
+        - 1-clause BSD License
+        - 0-clause BSD license
+        - BSD-3-Clause-LBNL
+        - BSD-2-Clause-Patent
+        - Creative Commons
+        - CERN Open Hardware Licence Version 2 - Permissive
+        - CERN Open Hardware Licence Version 2 - Weakly Reciprocal
+        - CERN Open Hardware Licence Version 2 - Strongly Reciprocal
+        - CECILL-2.1
+        - CDDL-1.0
+        - CPAL-1.0
+        - CPL-1.0
+        - CATOSL-1.1
+        - Coopyleft
+        - CopyFair
+        - CSL
+        - CAL-1.0
+        - EPL-1.0
+        - EPL-2.0
+        - eCos-2.0
+        - ECL-1.0
+        - ECL-2.0
+        - EFL-1.0
+        - EFL-2.0
+        - Entessa
+        - EUDatagrid
+        - EUPL-1.2
+        - FairSource
+        - Frameworx-1.0
+        - AGPL-3.0
+        - GPL-2.0
+        - GPL-3.0
+        - LGPL-2.1
+        - LGPL-3.0
+        - HPND
+        - IPL-1.0
+        - IPA
+        - ISC
+        - Jam
+        - LPPL-1.3c
+        - LiLiQ-P
+        - LiLiQ-R
+        - LiLiQ-R+
+        - LPL-1.0
+        - LPL-1.02
+        - MS-PL
+        - MS-RL
+        - MirOS
+        - MIT
+        - MIT-0
+        - Motosoto
+        - MPL-1.0
+        - MPL-1.1
+        - MPL-2.0
+        - MulanPSL
+        - Multics
+        - NASA-1.3
+        - Naumen
+        - NGPL
+        - NPOSL-3.0
+        - NTP
+        - OCLC-2.0
+        - OGTSL
+        - OSL-1.0
+        - OSL-2.1
+        - OSL-3.0
+        - OLDAP-2.8
+        - QPL-1.0
+        - RPSL-1.0
+        - RPL-1.1
+        - RPL-1.5
+        - RSCPL
+        - OFL-1.1
+        - PPL
+        - SimPL-2.0
+        - Sleepycat
+        - SPL-1.0
+        - Watcom-1.0
+        - UPL
+        - NCSA
+        - Upstream Compatibility License v1.0
+        - Unicode Data Files and Software License
+        - Unlicense
+        - VSL-1.0
+        - W3C
+        - WXwindows
+        - Xnet
+        - ZPL-2.0
+        - ZPL-2.1
+        - Zlib
+    validations:
+      required: false
+
+  - type: dropdown
+    id: source_language
+    attributes:
+      label: Primary Programming Language
+      description: The main language used in the project
+      options:
+        - C
+        - Bash
+        - Shell
+        - HTML
+        - CSS
+        - JavaScript
+        - Java
+        - Python
+        - PHP
+        - C++
+        - C#
+        - SQL
+        - Perl
+        - Pascal
+        - Ruby
+        - Lua
+        - BASIC
+        - Fortran
+        - assembly
+        - MATLAB
+        - Lisp
+        - COBOL
+        - R
+        - Ada
+        - Haskell
+        - Prolog
+        - Go
+        - Scratch
+        - Visual Basic
+        - ALGOL
+        - Kotlin
+        - Rust
+        - Swift
+        - Objective-C
+        - Scala
+        - TeX
+        - TypeScript
+        - HCL
+        - Dart
+        - Elixir
+        - Erlang
+        - F#
+        - Julia
+        - Elm
+        - Other
+    validations:
+      required: false
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        ### Owner Information
+
+  - type: input
+    id: owner_name
+    attributes:
+      label: Owner Name
+      description: Name of the project owner/maintainer
+      placeholder: Individual name or organization name
+    validations:
+      required: false
+
+  - type: dropdown
+    id: owner_type
+    attributes:
+      label: Owner Type
+      description: Type of owner
+      options:
+        - individual
+        - community
+        - organization
+    validations:
+      required: false
+
+  - type: textarea
+    id: owner_description
+    attributes:
+      label: Owner Description
+      description: Brief description of the owner
+      placeholder: Tell us about the owner...
+    validations:
+      required: false
+
+  - type: input
+    id: owner_tags
+    attributes:
+      label: Owner Tags
+      description: Comma-separated tags for the owner (1-10 tags, max 24 characters each)
+      placeholder: e.g., startup, enterprise, nonprofit
+    validations:
+      required: false
+
+  - type: input
+    id: owner_url_website
+    attributes:
+      label: Owner Website URL
+      description: URL to the owner's website
+      placeholder: https://example.com
+    validations:
+      required: false
+
+  - type: dropdown
+    id: owner_is_a_startup
+    attributes:
+      label: Is the owner a startup?
+      description: Select if the owner is a startup
+      options:
+        - "true"
+        - "false"
+    validations:
+      required: false
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        ### Additional Notes
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Additional Notes
+      description: Any additional information or context for this update request
+      placeholder: Add any relevant details...
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: verification
+    attributes:
+      label: Verification
+      description: Please confirm the following
+      options:
+        - label: I have verified that the information I'm providing is accurate
+          required: true
+        - label: I am authorized to request changes to this project (owner or maintainer)
+          required: true
