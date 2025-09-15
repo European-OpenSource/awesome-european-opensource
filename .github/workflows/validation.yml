@@ -1,0 +1,63 @@
+name: Validation
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/validation.yml"
+      - "awesome/**"
+      - "scheme/**"
+      - "scripts/validator.py"
+  pull_request:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/validation.yml"
+      - "awesome/**"
+      - "scheme/**"
+      - "scripts/validator.py"
+    types: [opened, synchronize]
+
+jobs:
+  execute:
+    name: Execute
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        id: setup-python
+        uses: actions/setup-python@v5
+        with:
+          python-version-file: ".python-version"
+
+      - name: Setup Uv
+        id: setup-uv
+        uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+          cache-dependency-glob: |
+            uv.lock
+            pyproject.toml
+
+      - name: Setup environment
+        run: |
+          echo "Pipeline info"
+          echo "  - OS: $(uname -mo)"
+          echo "  - UV version: ${{ steps.setup-uv.outputs.uv-version }}"
+          echo "  - Python version: ${{ steps.setup-python.outputs.python-version}}"
+
+          uv sync --all-extras
+
+      - name: "[Validate] Linting"
+        timeout-minutes: 3
+        uses: pre-commit/action@v3.0.1
+
+      - name: "[Validate] Awesome data"
+        timeout-minutes: 3
+        run: |
+          uv run python scripts/validator.py

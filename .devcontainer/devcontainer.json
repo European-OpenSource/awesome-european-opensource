@@ -1,0 +1,37 @@
+{
+    "name": "european-opensource-awesome",
+    "build": {
+        "context": "${localWorkspaceFolder}",
+        "dockerfile": "${localWorkspaceFolder}/.devcontainer/Dockerfile",
+        "args": {
+            "UV_VERSION": "latest",
+            "PY_VERSION": "3.12"
+        }
+    },
+    "workspaceFolder": "${localWorkspaceFolder}",
+    "workspaceMount": "source=${localWorkspaceFolder},target=${localWorkspaceFolder},type=bind",
+    "mounts": [
+        "source=${localEnv:HOME}/.ssh,target=/home/vscode/.ssh,type=bind,consistency=cached"
+    ],
+    "features": {
+        "ghcr.io/devcontainers/features/github-cli:1": {}
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-azuretools.vscode-docker",
+                "github.vscode-github-actions",
+                "esbenp.prettier-vscode",
+                "ms-python.python",
+                "ms-python.vscode-pylance",
+                "ms-python.debugpy",
+                "mohsen1.prettify-json",
+                "redhat.vscode-yaml"
+            ]
+        }
+    },
+    "containerEnv": {},
+    "postCreateCommand": "uv sync --all-extras",
+    "postStartCommand": "uv run pre-commit install",
+    "remoteUser": "vscode"
+}
