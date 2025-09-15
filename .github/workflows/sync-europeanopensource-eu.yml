@@ -1,0 +1,47 @@
+name: Sync europeanopensource.eu
+
+permissions:
+  id-token: write
+  contents: write
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/sync-europeanopensource-com.yml"
+      - "awesome/**"
+  schedule:
+    - cron: "0 9 15 * *" # every 15th of the month at 9:00 AM UTC
+  workflow_dispatch:
+
+jobs:
+  execute:
+    name: Execute
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v5
+
+      - name: Trigger deployment workflow
+        uses: actions/github-script@v8
+        with:
+          github-token: ${{ secrets.GH_ACTION_WORKFLOWS }}
+          retries: 3
+          script: |
+            const owner = 'European-OpenSource';
+            const repo = 'europeanopensource.eu';
+            const event_type = 'sync-database';
+            const ref = 'main';
+            const client_payload = {
+              "hash": "${{ github.sha }}".substring(0, 7),
+              "run_id": "${{ github.run_id }}",
+            };
+
+            github.rest.repos.createDispatchEvent({
+                owner,
+                repo,
+                event_type,
+                client_payload
+            });
