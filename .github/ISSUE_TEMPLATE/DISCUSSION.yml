@@ -1,0 +1,43 @@
+name: "💬 Discussion"
+about: Use this template to start a general discussion or ask an open question to the community.
+title: "[DISCUSSION] <title>"
+labels: ["discussion"]
+
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: "Discussion description"
+      description: "Short description of the topic or question."
+      placeholder: "Write the description here..."
+      required: true
+  - type: textarea
+    id: reference_issues
+    attributes:
+      label: "Reference Issues"
+      description: Common issues
+      placeholder: "#Issues IDs"
+    validations:
+      required: false
+  - type: textarea
+    id: basic_example
+    attributes:
+      label: "Basic Example"
+      description: Indicate here some basic examples of your question.
+      placeholder: Describe specific case or example
+    validations:
+      required: false
+  - type: textarea
+    id: notes
+    attributes:
+      label: "Notes"
+      description: "Additional information, context, or technical details."
+      placeholder: "Any notes or clarifications..."
+      required: false
+  - type: input
+    id: references
+    attributes:
+      label: "References"
+      description: "Links to documents, issues, PRs, or other relevant resources. Separate multiple links with commas."
+      placeholder: "https://example.com, https://github.com/owner/repo/..."
+      required: false
