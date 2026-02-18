@@ -1,0 +1,24 @@
+{
+  "name": "Sossoldi",
+  "category": "app",
+  "country": "Italy",
+  "description": "Sossoldi is a free and open source wealth management / personal finance / Net Worth tracking app, made with Flutter.",
+  "source": {
+    "platform": "GitHub",
+    "url_repository": "https://github.com/RIP-Comm/sossoldi",
+    "license": "MIT",
+    "language": "Dart",
+    "url_documentation": "https://rip-comm.github.io/sossoldi/"
+  },
+  "metadata": {
+    "filename": "sossoldi-9b3657.json",
+    "filepath": "awesome/projects/sossoldi-9b3657.json",
+    "created_at": "2026-02-18T11:04:05Z"
+  },
+  "owner": {
+    "type": "community",
+    "name": "RIPsters",
+    "url_website": "https://github.com/RIP-Comm",
+    "is_a_startup": false
+  }
+}
