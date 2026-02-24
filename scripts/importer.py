@@ -10,6 +10,7 @@ import csv
 import hashlib
 import json
 import os
+import re
 import sys
 import unicodedata
 from abc import ABC, abstractmethod
@@ -33,12 +34,71 @@ def normalize_name(name: str) -> str:
     Returns:
         Normalized name suitable for filenames
     """
+    normalized_name = sanitize_name(name)
+
     # Remove accents using Unicode normalization
     name_without_accents = "".join(
-        c for c in unicodedata.normalize("NFD", name) if unicodedata.category(c) != "Mn"
+        c
+        for c in unicodedata.normalize("NFD", normalized_name)
+        if unicodedata.category(c) != "Mn"
     )
-    # Convert to lowercase and replace spaces with hyphens
-    return name_without_accents.replace(" ", "-").lower()
+
+    # Keep only safe characters for slug generation
+    slug_base = re.sub(r"[^a-zA-Z0-9\s-]", "", name_without_accents)
+    slug_base = re.sub(r"[\s_-]+", "-", slug_base).strip("-")
+
+    if not slug_base:
+        return "entity"
+
+    return slug_base.lower()
+
+
+def sanitize_text(value: str) -> str:
+    """Normalize generic text by removing control chars and extra spacing.
+
+    Args:
+        value: Raw text value from CSV
+
+    Returns:
+        Clean text compatible with Unicode and JSON output
+    """
+    normalized = unicodedata.normalize("NFKC", str(value))
+
+    # Handle escaped and real whitespace control sequences
+    normalized = (
+        normalized.replace("\\t", " ")
+        .replace("\\n", " ")
+        .replace("\\r", " ")
+        .replace("\t", " ")
+        .replace("\n", " ")
+        .replace("\r", " ")
+    )
+
+    # Drop remaining control characters
+    normalized = "".join(
+        char for char in normalized if unicodedata.category(char)[0] != "C"
+    )
+
+    return re.sub(r"\s+", " ", normalized).strip()
+
+
+def sanitize_name(value: str) -> str:
+    """Normalize names by removing special symbols and excess spaces."""
+    normalized = sanitize_text(value)
+    normalized = re.sub(r"[^\w\s\-\.'&]", "", normalized, flags=re.UNICODE)
+    return re.sub(r"\s+", " ", normalized).strip()
+
+
+def sanitize_description(value: str) -> str:
+    """Normalize descriptions preserving readable punctuation."""
+    normalized = sanitize_text(value)
+    normalized = re.sub(
+        r"[^\w\s\-\.,;:!?()'\"/&]",
+        "",
+        normalized,
+        flags=re.UNICODE,
+    )
+    return re.sub(r"\s+", " ", normalized).strip()
 
 
 def generate_filename(name: str, unique_identifier: str) -> str:
@@ -187,33 +247,35 @@ class ProjectImporter(Importer):
         Returns:
             Owner data dictionary
         """
-        owner_type = row["Who is the owner of this project?"]
+        owner_type = sanitize_text(row["Who is the owner of this project?"])
 
         if owner_type == "Organization":
             owner = {
                 "type": "organization",
-                "name": row["Company Name"],
-                "url_website": row["Company Website"],
-                "is_a_startup": row["Your company is a Startup?"],
+                "name": sanitize_name(row["Company Name"]),
+                "url_website": sanitize_text(row["Company Website"]),
+                "is_a_startup": sanitize_text(row["Your company is a Startup?"]),
             }
             if row.get("Company Description"):
-                owner["description"] = row["Company Description"]
+                owner["description"] = sanitize_description(row["Company Description"])
             return owner
 
         elif owner_type == "Individual":
             return {
                 "type": "individual",
-                "name": row["Owner Full Name or Username"],
+                "name": sanitize_name(row["Owner Full Name or Username"]),
             }
 
         elif owner_type == "Community":
             owner = {
                 "type": "community",
-                "name": row["Community Name"],
-                "url_website": row["Community Website"],
+                "name": sanitize_name(row["Community Name"]),
+                "url_website": sanitize_text(row["Community Website"]),
             }
             if row.get("Community Description"):
-                owner["description"] = row["Community Description"]
+                owner["description"] = sanitize_description(
+                    row["Community Description"]
+                )
             return owner
 
         else:
@@ -228,8 +290,8 @@ class ProjectImporter(Importer):
         Returns:
             Project data dictionary
         """
-        name = row["Name"]
-        repository_url = row["Repository url"]
+        name = sanitize_name(row["Name"])
+        repository_url = sanitize_text(row["Repository url"])
 
         # Generate unique filename
         filename = generate_filename(name, repository_url)
@@ -243,14 +305,14 @@ class ProjectImporter(Importer):
         # Build base project structure
         project_data = {
             "name": name,
-            "category": row["Category"].lower(),
-            "country": row["Country"],
-            "description": row.get("Description", ""),
+            "category": sanitize_text(row["Category"]).lower(),
+            "country": sanitize_text(row["Country"]),
+            "description": sanitize_description(row.get("Description", "")),
             "source": {
-                "platform": row["Platform"],
+                "platform": sanitize_text(row["Platform"]),
                 "url_repository": repository_url,
-                "license": row["License"],
-                "language": row["Language"],
+                "license": sanitize_text(row["License"]),
+                "language": sanitize_text(row["Language"]),
             },
             "metadata": {
                 "filename": filename,
@@ -261,7 +323,9 @@ class ProjectImporter(Importer):
 
         # Add optional documentation URL
         if row.get("Documentation url"):
-            project_data["source"]["url_documentation"] = row["Documentation url"]
+            project_data["source"]["url_documentation"] = sanitize_text(
+                row["Documentation url"]
+            )
 
         # Add owner information
         project_data["owner"] = self._build_owner_data(row)

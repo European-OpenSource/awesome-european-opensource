@@ -73,7 +73,7 @@ When you've identified an issue and you want to work on it here's how you can ge
 5. Create a pull-request (It would be better to create a single MR for each project.)
 
    ```bash
-   git checkout -b feat/import-projects-$(date +%m-%d-%Y-%s)
+   git checkout -b feat/add-projects-$(date +%m-%d-%Y-%s)
    git add .
    just test
    git commit -m "feat(awesome:projects): import projects"
