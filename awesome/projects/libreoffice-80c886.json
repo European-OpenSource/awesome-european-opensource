@@ -1,0 +1,25 @@
+{
+  "name": "LibreOffice",
+  "category": "app",
+  "country": "Germany",
+  "description": "LibreOffice is a free, open source and private office suite, used by millions of people around the world and the successor to OpenOffice. It is made by a worldwide community and backed by a non-profit organisation (The Document Foundation).",
+  "source": {
+    "platform": "Other",
+    "url_repository": "https://git.libreoffice.org",
+    "license": "MPL-2.0",
+    "language": "C++",
+    "url_documentation": "https://documentation.libreoffice.org/"
+  },
+  "metadata": {
+    "filename": "libreoffice-80c886.json",
+    "filepath": "awesome/projects/libreoffice-80c886.json",
+    "created_at": "2026-02-24T18:47:14Z"
+  },
+  "owner": {
+    "type": "organization",
+    "name": "The Document Foundation",
+    "url_website": "https://www.documentfoundation.org",
+    "is_a_startup": false,
+    "description": "The Document Foundation is a small non-profit organisation, registered in Berlin, that oversees the LibreOffice project and community."
+  }
+}

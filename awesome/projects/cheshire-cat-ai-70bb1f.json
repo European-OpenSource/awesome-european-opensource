@@ -1,0 +1,25 @@
+{
+  "name": "Cheshire Cat AI",
+  "category": "ai",
+  "country": "Italy",
+  "description": "Python framework to build AI agents and publish them on the web. Multi-user, multi-agent, extensible via plugins, supports MCP and A2A protocols.",
+  "source": {
+    "platform": "GitHub",
+    "url_repository": "https://github.com/cheshire-cat-ai/core",
+    "license": "GPL-3.0",
+    "language": "Python",
+    "url_documentation": "https://cheshire-cat-ai.github.io/docs/"
+  },
+  "metadata": {
+    "filename": "cheshire-cat-ai-70bb1f.json",
+    "filepath": "awesome/projects/cheshire-cat-ai-70bb1f.json",
+    "created_at": "2026-02-24T18:47:14Z"
+  },
+  "owner": {
+    "type": "community",
+    "name": "Cheshire Cat AI",
+    "url_website": "https://cheshirecat.ai/",
+    "description": "AI for creativity, freedom and research.",
+    "is_a_startup": false
+  }
+}

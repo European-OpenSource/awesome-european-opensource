@@ -1,0 +1,24 @@
+{
+  "name": "Apache Syncope",
+  "category": "other",
+  "country": "Italy",
+  "description": "Apache Syncope is an Open Source system for managing digital identities in enterprise environments, implemented in Jakarta EE technology and released under the Apache 2.0 license.",
+  "source": {
+    "platform": "GitHub",
+    "url_repository": "https://github.com/apache/syncope/",
+    "license": "Apache-2.0",
+    "language": "Java",
+    "url_documentation": "https://syncope.apache.org/docs/"
+  },
+  "metadata": {
+    "filename": "apache-syncope-c940e7.json",
+    "filepath": "awesome/projects/apache-syncope-c940e7.json",
+    "created_at": "2026-02-24T18:47:14Z"
+  },
+  "owner": {
+    "type": "community",
+    "name": "The Apache Software Foundation",
+    "url_website": "https://www.apache.org/",
+    "is_a_startup": false
+  }
+}
