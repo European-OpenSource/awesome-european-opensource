@@ -1,0 +1,23 @@
+{
+  "name": "FusionCache",
+  "category": "library",
+  "country": "Italy",
+  "description": "FusionCache is an easy to use, fast and robust hybrid cache with advanced resiliency features.",
+  "source": {
+    "platform": "GitHub",
+    "url_repository": "https://github.com/ZiggyCreatures/FusionCache",
+    "license": "MIT",
+    "language": "C#",
+    "url_documentation": "https://github.com/ZiggyCreatures/FusionCache"
+  },
+  "metadata": {
+    "filename": "fusioncache-b3f821.json",
+    "filepath": "awesome/projects/fusioncache-b3f821.json",
+    "created_at": "2026-03-03T20:09:51Z"
+  },
+  "owner": {
+    "type": "individual",
+    "name": "",
+    "is_a_startup": false
+  }
+}
