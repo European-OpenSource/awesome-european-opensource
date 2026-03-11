@@ -1,0 +1,23 @@
+{
+  "name": "CertMate",
+  "category": "framework",
+  "country": "Italy",
+  "description": "SSL Certificate Management System (API UI)",
+  "source": {
+    "platform": "GitHub",
+    "url_repository": "https://github.com/fabriziosalmi/certmate",
+    "license": "MIT-0",
+    "language": "Python",
+    "url_documentation": "https://www.certmate.org/"
+  },
+  "metadata": {
+    "filename": "certmate-3aec74.json",
+    "filepath": "awesome/projects/certmate-3aec74.json",
+    "created_at": "2026-03-10T11:48:54Z"
+  },
+  "owner": {
+    "type": "individual",
+    "name": "Fabrizio Salmi",
+    "is_a_startup": false
+  }
+}
