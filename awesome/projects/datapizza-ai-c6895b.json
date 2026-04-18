@@ -1,0 +1,23 @@
+{
+  "name": "datapizza-ai",
+  "category": "ai",
+  "country": "Italy",
+  "description": "datapizza-ai is a Python GenAI framework for building agents from development to production with minimal abstraction. It supports multi-provider LLMs (OpenAI, Anthropic, Gemini, Mistral), built-in OpenTelemetry tracing, modular RAG pipelines, and multi-agent orchestration. Built by the Italian Data & AI community Datapizza.",
+  "source": {
+    "platform": "GitHub",
+    "url_repository": "https://github.com/datapizza-labs/datapizza-ai",
+    "license": "MIT",
+    "language": "Python"
+  },
+  "metadata": {
+    "filename": "datapizza-ai-c6895b.json",
+    "filepath": "awesome/projects/datapizza-ai-c6895b.json",
+    "created_at": "2026-04-18T10:00:00Z"
+  },
+  "owner": {
+    "type": "organization",
+    "name": "Datapizza",
+    "url_website": "https://datapizza.tech",
+    "is_a_startup": false
+  }
+}

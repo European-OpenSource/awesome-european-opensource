@@ -1,0 +1,24 @@
+{
+  "name": "OpenProject",
+  "category": "app",
+  "country": "Germany",
+  "description": "OpenProject is an open-source project management and team collaboration platform made in Berlin, Germany. It supports classical and agile workflows, Gantt charts, time tracking, Scrum/Kanban boards, wikis, and budgeting. GPL-3.0 licensed and self-hostable, used by public administrations and enterprises across Europe.",
+  "source": {
+    "platform": "GitHub",
+    "url_repository": "https://github.com/opf/openproject",
+    "license": "GPL-3.0",
+    "language": "Ruby",
+    "url_documentation": "https://www.openproject.org/docs/"
+  },
+  "metadata": {
+    "filename": "openproject-af0b0a.json",
+    "filepath": "awesome/projects/openproject-af0b0a.json",
+    "created_at": "2026-04-18T10:00:00Z"
+  },
+  "owner": {
+    "type": "organization",
+    "name": "OpenProject GmbH",
+    "url_website": "https://www.openproject.org",
+    "is_a_startup": false
+  }
+}

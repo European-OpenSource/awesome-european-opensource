@@ -1,0 +1,24 @@
+{
+  "name": "Drupal",
+  "category": "framework",
+  "country": "Belgium",
+  "description": "Drupal is a free, open-source content management framework written in PHP, used to build websites, portals, and digital experiences at any scale. Founded in Belgium by Dries Buytaert, it powers millions of sites worldwide including government, enterprise, and educational platforms, with a vast ecosystem of modules and themes.",
+  "source": {
+    "platform": "GitLab",
+    "url_repository": "https://git.drupalcode.org/project/drupal",
+    "license": "GPL-2.0",
+    "language": "PHP",
+    "url_documentation": "https://www.drupal.org/documentation"
+  },
+  "metadata": {
+    "filename": "drupal-99afdb.json",
+    "filepath": "awesome/projects/drupal-99afdb.json",
+    "created_at": "2026-04-18T10:00:00Z"
+  },
+  "owner": {
+    "type": "community",
+    "name": "Drupal",
+    "url_website": "https://www.drupal.org",
+    "is_a_startup": false
+  }
+}
