@@ -1,0 +1,23 @@
+{
+  "name": "ScrapeGraphAI",
+  "category": "ai",
+  "country": "Italy",
+  "description": "",
+  "source": {
+    "platform": "GitHub",
+    "url_repository": "https://github.com/ScrapeGraphAI/Scrapegraph-ai",
+    "license": "MIT",
+    "language": "Python"
+  },
+  "metadata": {
+    "filename": "scrapegraphai-5459ce.json",
+    "filepath": "awesome/projects/scrapegraphai-5459ce.json",
+    "created_at": "2026-04-18T10:00:00Z"
+  },
+  "owner": {
+    "type": "organization",
+    "name": "ScrapeGraphAI",
+    "url_website": "https://scrapegraph.ai",
+    "is_a_startup": true
+  }
+}

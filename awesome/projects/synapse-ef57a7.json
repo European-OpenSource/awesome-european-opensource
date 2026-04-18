@@ -1,0 +1,24 @@
+{
+  "name": "Synapse",
+  "category": "app",
+  "country": "United Kingdom",
+  "description": "",
+  "source": {
+    "platform": "GitHub",
+    "url_repository": "https://github.com/element-hq/synapse",
+    "license": "AGPL-3.0",
+    "language": "Python",
+    "url_documentation": "https://element-hq.github.io/synapse/latest/"
+  },
+  "metadata": {
+    "filename": "synapse-ef57a7.json",
+    "filepath": "awesome/projects/synapse-ef57a7.json",
+    "created_at": "2026-04-18T10:00:00Z"
+  },
+  "owner": {
+    "type": "organization",
+    "name": "Element",
+    "url_website": "https://element.io",
+    "is_a_startup": false
+  }
+}

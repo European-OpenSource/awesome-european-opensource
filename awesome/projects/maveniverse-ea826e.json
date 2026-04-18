@@ -1,0 +1,23 @@
+{
+  "name": "Maveniverse",
+  "category": "library",
+  "country": "Denmark",
+  "description": "",
+  "source": {
+    "platform": "GitHub",
+    "url_repository": "https://github.com/maveniverse/mima",
+    "license": "EPL-2.0",
+    "language": "Java",
+    "url_documentation": "https://maveniverse.eu/"
+  },
+  "metadata": {
+    "filename": "maveniverse-ea826e.json",
+    "filepath": "awesome/projects/maveniverse-ea826e.json",
+    "created_at": "2026-04-18T10:00:00Z"
+  },
+  "owner": {
+    "type": "individual",
+    "name": "Tamas Cservenak",
+    "is_a_startup": false
+  }
+}

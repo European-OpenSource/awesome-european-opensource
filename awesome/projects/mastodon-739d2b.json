@@ -1,0 +1,24 @@
+{
+  "name": "Mastodon",
+  "category": "app",
+  "country": "Germany",
+  "description": "",
+  "source": {
+    "platform": "GitHub",
+    "url_repository": "https://github.com/mastodon/mastodon",
+    "license": "AGPL-3.0",
+    "language": "Ruby",
+    "url_documentation": "https://docs.joinmastodon.org"
+  },
+  "metadata": {
+    "filename": "mastodon-739d2b.json",
+    "filepath": "awesome/projects/mastodon-739d2b.json",
+    "created_at": "2026-04-18T10:00:00Z"
+  },
+  "owner": {
+    "type": "organization",
+    "name": "Mastodon gGmbH",
+    "url_website": "https://joinmastodon.org",
+    "is_a_startup": false
+  }
+}

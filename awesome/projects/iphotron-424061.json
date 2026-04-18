@@ -1,0 +1,23 @@
+{
+  "name": "iPhotron",
+  "category": "app",
+  "country": "Germany",
+  "description": "",
+  "source": {
+    "platform": "GitHub",
+    "url_repository": "https://github.com/OliverZhaohaibin/iPhotron-LocalPhotoAlbumManager",
+    "license": "MIT",
+    "language": "Python",
+    "url_documentation": "https://github.com/OliverZhaohaibin/iPhotron-LocalPhotoAlbumManager/blob/main/README.md"
+  },
+  "metadata": {
+    "filename": "iphotron-424061.json",
+    "filepath": "awesome/projects/iphotron-424061.json",
+    "created_at": "2026-04-18T10:00:00Z"
+  },
+  "owner": {
+    "type": "individual",
+    "name": "OliverZhaohaibin",
+    "is_a_startup": false
+  }
+}

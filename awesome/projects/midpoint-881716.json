@@ -1,0 +1,24 @@
+{
+  "name": "MidPoint",
+  "category": "app",
+  "country": "Slovakia",
+  "description": "",
+  "source": {
+    "platform": "GitHub",
+    "url_repository": "https://github.com/Evolveum/midpoint",
+    "license": "EUPL-1.2",
+    "language": "Java",
+    "url_documentation": "https://docs.evolveum.com/"
+  },
+  "metadata": {
+    "filename": "midpoint-881716.json",
+    "filepath": "awesome/projects/midpoint-881716.json",
+    "created_at": "2026-04-18T10:00:00Z"
+  },
+  "owner": {
+    "type": "organization",
+    "name": "Evolveum",
+    "url_website": "https://evolveum.com/",
+    "is_a_startup": false
+  }
+}

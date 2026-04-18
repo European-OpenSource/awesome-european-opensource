@@ -1,0 +1,24 @@
+{
+  "name": "LemonLDAP-NG",
+  "category": "app",
+  "country": "France",
+  "description": "",
+  "source": {
+    "platform": "GitLab",
+    "url_repository": "https://gitlab.ow2.org/lemonldap-ng/lemonldap-ng",
+    "license": "GPL-2.0",
+    "language": "Perl",
+    "url_documentation": "https://lemonldap-ng.org/documentation/latest/"
+  },
+  "metadata": {
+    "filename": "lemonldap-ng-b67eae.json",
+    "filepath": "awesome/projects/lemonldap-ng-b67eae.json",
+    "created_at": "2026-04-18T10:00:00Z"
+  },
+  "owner": {
+    "type": "community",
+    "name": "LemonLDAP-NG",
+    "url_website": "https://lemonldap-ng.org",
+    "is_a_startup": false
+  }
+}

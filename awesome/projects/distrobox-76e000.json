@@ -1,0 +1,22 @@
+{
+  "name": "Distrobox",
+  "category": "cli",
+  "country": "Italy",
+  "description": "",
+  "source": {
+    "platform": "GitHub",
+    "url_repository": "https://github.com/89luca89/distrobox",
+    "license": "GPL-3.0",
+    "language": "Shell"
+  },
+  "metadata": {
+    "filename": "distrobox-76e000.json",
+    "filepath": "awesome/projects/distrobox-76e000.json",
+    "created_at": "2026-04-18T10:00:00Z"
+  },
+  "owner": {
+    "type": "individual",
+    "name": "Luca Di Maio",
+    "is_a_startup": false
+  }
+}
