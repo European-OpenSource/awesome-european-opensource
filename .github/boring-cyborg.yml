@@ -7,12 +7,7 @@ labelPRBasedOnFilePath:
     - uv.lock
     - pyproject.toml
 
-  awesome:
-    - awesome/*
-    - awesome/**/*
-    - schemas/*
-
-  "awesome: projects":
+  'awesome: projects':
     - awesome/projects/*
     - awesome/projects/**/*
 
@@ -24,9 +19,9 @@ firstPRWelcomeComment: >
   Thanks for opening this pull request! Please check out our contributing guidelines.
 
 verifyTitles:
-  titleRegexp: ^(feat|feat!|fix|fix!|docs|refactor|refactor!|test|chore|build|ci)\((release|docs|deps|deps-dev|awesome:projects)\):.*
+  titleRegexp: ^(feat|feat!|fix|fix!|docs|refactor|refactor!|test|chore)\((release|docs|deps|deps-dev|awesome:projects|ci)\):.*
   alwaysUsePrTitle: true
   validateEitherPrOrSingleCommitTitle: true
-  statusTitle: "Title Validator"
-  successMessage: "Validation successful!"
-  failureMessage: "Wrong ${type} title: ${title}"
+  statusTitle: 'Title Validator'
+  successMessage: 'Validation successful!'
+  failureMessage: 'Wrong ${type} title: ${title}'

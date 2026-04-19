@@ -13,10 +13,15 @@ lint:
 validator:
     @uv run python scripts/validator.py
 
-# Run test
+# Run unit tests for scripts
+unit-test:
+    @uv run pytest tests/ -v
+
+# Run all checks: lint + validator + unit tests
 test:
     @just lint
     @just validator
+    @just unit-test
 
 # Import projects - pass additional arguments to the importer script
 import *args:
