@@ -1,0 +1,29 @@
+{
+  "name": "Medha",
+  "description": "Medha is an asynchronous, high-performance semantic cache library designed specifically for Text-to-Query systems. Unlike traditional key-value caches that require exact string matches, Medha understands that \"Show me the top 5 users\" and \"List the first five users\" are the same question. It intercepts these queries and returns pre-calculated database queries (SQL, Cypher, etc.), bypassing the expensive and slow LLM generation step.",
+  "category": "library",
+  "country": "Italy",
+  "source": {
+    "platform": "GitHub",
+    "url_repository": "https://github.com/ArchAI-Labs/medha",
+    "license": "Apache-2.0",
+    "language": "Python"
+  },
+  "owner": {
+    "name": "ArchAI Labs",
+    "type": "community",
+    "description": "ArchAI-Labs is an innovation hub dedicated to bridging the gap between complex codebases and human understanding. We build autonomous agents and intelligent tools designed to automate documentation and enhance software observability.",
+    "url_website": "https://github.com/ArchAI-Labs",
+    "is_a_startup": false
+  },
+  "metadata": {
+    "filename": "medha-87e3db.json",
+    "filepath": "awesome/projects/medha-87e3db.json",
+    "created_at": "2026-04-20T21:21:00Z"
+  },
+  "tags": [
+    "agent memory",
+    "semantic cache",
+    "text2query"
+  ]
+}
