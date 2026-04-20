@@ -184,10 +184,10 @@ def create_pr(
 
     # 4. Commit the file
     content_b64 = base64.b64encode(
-        json.dumps(json_data, indent=2, ensure_ascii=False).encode()
+        (json.dumps(json_data, indent=2, ensure_ascii=False) + "\n").encode()
     ).decode()
     put_body: dict[str, Any] = {
-        "message": f"feat: add {project_name} (closes #{issue_number})",
+        "message": f"feat(awesome:projects): add {project_name} (closes #{issue_number})",
         "content": content_b64,
         "branch": branch_name,
     }
@@ -205,7 +205,7 @@ def create_pr(
             f"/repos/{repo}/pulls",
             token,
             json={
-                "title": f"feat: add {project_name}",
+                "title": f"feat(awesome:projects): add {project_name}",
                 "head": branch_name,
                 "base": "main",
                 "body": pr_body,
