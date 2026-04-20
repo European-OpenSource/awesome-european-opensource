@@ -1,24 +1,51 @@
 """Script to parse a GitHub Issue submission and open a PR with the project JSON file."""
 
+import argparse
 import base64
 import json
 import os
 import re
 import sys
-from datetime import UTC, datetime
 from typing import Any
 
 import httpx
 
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from importer import generate_filename as _generate_filename
+from importer import (
+    generate_filename,
+    get_timestamp,
+    sanitize_description,
+    sanitize_name,
+    sanitize_text,
+)
 from validator import ProjectValidator
 
 
 MAX_TAGS = 10
 HTTP_NOT_FOUND = 404
 HTTP_UNPROCESSABLE_ENTITY = 422
+
+LABEL_CHECK = "check-submission"
+LABEL_APPROVED = "approved-submission"
+
+ISSUE_FIELDS: dict[str, str] = {
+    "project_name": "Project Name",
+    "description": "Description",
+    "category": "Category",
+    "country": "Country",
+    "platform": "Platform",
+    "url_repository": "Repository URL",
+    "license": "License",
+    "language": "Language",
+    "owner_name": "Owner Name",
+    "owner_type": "Owner Type",
+    "owner_description": "Owner Description",
+    "owner_website": "Owner Website URL",
+    "is_a_startup": "Is a Startup",
+    "url_documentation": "Documentation URL",
+    "tags": "Tags",
+}
 
 
 def parse_field(body: str, label: str) -> str | None:
@@ -31,27 +58,15 @@ def parse_field(body: str, label: str) -> str | None:
 
 
 def parse_issue_body(body: str) -> dict[str, Any]:
-    return {
-        "project_name": parse_field(body, "Project Name"),
-        "description": parse_field(body, "Description"),
-        "category": parse_field(body, "Category"),
-        "country": parse_field(body, "Country"),
-        "platform": parse_field(body, "Platform"),
-        "url_repository": parse_field(body, "Repository URL"),
-        "license": parse_field(body, "License"),
-        "language": parse_field(body, "Language"),
-        "owner_name": parse_field(body, "Owner Name"),
-        "owner_type": parse_field(body, "Owner Type"),
-        "owner_description": parse_field(body, "Owner Description"),
-        "owner_website": parse_field(body, "Owner Website URL"),
-        "is_a_startup": parse_field(body, "Is a Startup"),
-        "url_documentation": parse_field(body, "Documentation URL"),
-        "tags": parse_field(body, "Tags"),
-    }
+    sections: dict[str, str] = {}
+    for match in re.finditer(r"### (.+?)\s*\n\n(.+?)(?=\n### |\Z)", body, re.DOTALL):
+        sections[match.group(1).strip()] = match.group(2).strip()
 
-
-def generate_filename(name: str, url_repository: str) -> str:
-    return _generate_filename(name, url_repository)
+    result: dict[str, Any] = {}
+    for key, label in ISSUE_FIELDS.items():
+        raw = sections.get(label)
+        result[key] = None if (raw is None or raw == "_No response_") else raw
+    return result
 
 
 def normalize_tags(raw: str | None) -> list[str]:
@@ -71,38 +86,38 @@ def normalize_tags(raw: str | None) -> list[str]:
 
 def build_project_json(parsed: dict[str, Any], filename: str) -> dict[str, Any]:
     data: dict[str, Any] = {
-        "name": parsed["project_name"],
-        "description": parsed["description"],
-        "category": parsed["category"],
-        "country": parsed["country"],
+        "name": sanitize_name(parsed["project_name"] or ""),
+        "description": sanitize_description(parsed["description"] or ""),
+        "category": sanitize_text(parsed["category"] or "").lower(),
+        "country": sanitize_text(parsed["country"] or ""),
         "source": {
-            "platform": parsed["platform"],
-            "url_repository": parsed["url_repository"],
-            "license": parsed["license"],
-            "language": parsed["language"],
+            "platform": sanitize_text(parsed["platform"] or ""),
+            "url_repository": sanitize_text(parsed["url_repository"] or ""),
+            "license": sanitize_text(parsed["license"] or ""),
+            "language": sanitize_text(parsed["language"] or ""),
         },
         "owner": {
-            "name": parsed["owner_name"] or parsed["project_name"],
-            "type": parsed["owner_type"] or "individual",
+            "name": sanitize_name(parsed["owner_name"] or ""),
+            "type": sanitize_text(parsed["owner_type"] or "individual").lower(),
         },
         "metadata": {
             "filename": filename,
             "filepath": f"awesome/projects/{filename}",
-            "created_at": datetime.now(UTC).isoformat(),
+            "created_at": get_timestamp(),
         },
     }
 
     if parsed.get("owner_description"):
-        data["owner"]["description"] = parsed["owner_description"]
+        data["owner"]["description"] = sanitize_description(parsed["owner_description"])
 
     if parsed.get("owner_website"):
-        data["owner"]["url_website"] = parsed["owner_website"]
+        data["owner"]["url_website"] = sanitize_text(parsed["owner_website"])
 
     if parsed.get("is_a_startup") is not None:
         data["owner"]["is_a_startup"] = parsed["is_a_startup"] == "Yes"
 
     if parsed.get("url_documentation"):
-        data["source"]["url_documentation"] = parsed["url_documentation"]
+        data["source"]["url_documentation"] = sanitize_text(parsed["url_documentation"])
 
     tags = normalize_tags(parsed.get("tags"))
     if tags:
@@ -119,62 +134,65 @@ def validate_json(data: dict[str, Any]) -> list[str]:
     return []
 
 
-def github_request(method: str, path: str, token: str, **kwargs: Any) -> dict[str, Any]:
-    url = f"https://api.github.com{path}"
-    headers = {
-        "Authorization": f"Bearer {token}",
-        "Accept": "application/vnd.github+json",
-        "X-GitHub-Api-Version": "2022-11-28",
-    }
-    response = httpx.request(method, url, headers=headers, **kwargs)
-    response.raise_for_status()
-    if response.content:
-        return response.json()
-    return {}
+class GitHubClient:
+    BASE_URL = "https://api.github.com"
+
+    def __init__(self, token: str) -> None:
+        self._client = httpx.Client(
+            headers={
+                "Authorization": f"Bearer {token}",
+                "Accept": "application/vnd.github+json",
+                "X-GitHub-Api-Version": "2022-11-28",
+            }
+        )
+
+    def request(self, method: str, path: str, **kwargs: Any) -> dict[str, Any]:
+        response = self._client.request(method, f"{self.BASE_URL}{path}", **kwargs)
+        response.raise_for_status()
+        return response.json() if response.content else {}
+
+    def __enter__(self) -> "GitHubClient":
+        return self
+
+    def __exit__(self, *args: Any) -> None:
+        self._client.close()
 
 
 def create_pr(
+    gh: GitHubClient,
     json_data: dict[str, Any],
     filename: str,
     issue_number: int,
     repo: str,
-    token: str,
 ) -> str:
     branch_name = f"submission/issue-{issue_number}"
     file_path = f"awesome/projects/{filename}"
-    project_name = json_data.get("name", filename)
+    project_name = json_data["name"]
 
-    # 1. Get SHA of main branch
-    ref_data = github_request("GET", f"/repos/{repo}/git/ref/heads/main", token)
+    ref_data = gh.request("GET", f"/repos/{repo}/git/ref/heads/main")
     main_sha = ref_data["object"]["sha"]
 
-    # 2. Create or update the submission branch
     try:
-        github_request(
-            "POST",
-            f"/repos/{repo}/git/refs",
-            token,
-            json={"ref": f"refs/heads/{branch_name}", "sha": main_sha},
+        gh.request(
+            "PATCH",
+            f"/repos/{repo}/git/refs/heads/{branch_name}",
+            json={"sha": main_sha, "force": True},
         )
     except httpx.HTTPStatusError as exc:
-        if exc.response.status_code == HTTP_UNPROCESSABLE_ENTITY:
-            # Branch already exists — update it to point to main SHA
-            github_request(
-                "PATCH",
-                f"/repos/{repo}/git/refs/heads/{branch_name}",
-                token,
-                json={"sha": main_sha, "force": True},
+        if exc.response.status_code == HTTP_NOT_FOUND:
+            gh.request(
+                "POST",
+                f"/repos/{repo}/git/refs",
+                json={"ref": f"refs/heads/{branch_name}", "sha": main_sha},
             )
         else:
             raise
 
-    # 3. Check if file already exists to get its SHA (needed for update)
     file_sha: str | None = None
     try:
-        existing = github_request(
+        existing = gh.request(
             "GET",
             f"/repos/{repo}/contents/{file_path}",
-            token,
             params={"ref": branch_name},
         )
         file_sha = existing.get("sha")
@@ -182,7 +200,6 @@ def create_pr(
         if exc.response.status_code != HTTP_NOT_FOUND:
             raise
 
-    # 4. Commit the file
     content_b64 = base64.b64encode(
         (json.dumps(json_data, indent=2, ensure_ascii=False) + "\n").encode()
     ).decode()
@@ -193,17 +210,15 @@ def create_pr(
     }
     if file_sha:
         put_body["sha"] = file_sha
-    github_request("PUT", f"/repos/{repo}/contents/{file_path}", token, json=put_body)
+    gh.request("PUT", f"/repos/{repo}/contents/{file_path}", json=put_body)
 
-    # 5. Open PR
     pr_body = (
         f"Automated submission from issue #{issue_number}.\n\nCloses #{issue_number}"
     )
     try:
-        pr_data = github_request(
+        pr_data = gh.request(
             "POST",
             f"/repos/{repo}/pulls",
-            token,
             json={
                 "title": f"feat(awesome:projects): add {project_name}",
                 "head": branch_name,
@@ -214,11 +229,9 @@ def create_pr(
         return pr_data["html_url"]
     except httpx.HTTPStatusError as exc:
         if exc.response.status_code == HTTP_UNPROCESSABLE_ENTITY:
-            # PR already exists — find it
-            prs = github_request(
+            prs = gh.request(
                 "GET",
                 f"/repos/{repo}/pulls",
-                token,
                 params={"head": f"{repo.split('/')[0]}:{branch_name}", "state": "open"},
             )
             if prs:
@@ -226,66 +239,80 @@ def create_pr(
         raise
 
 
-def post_comment(issue_number: int, repo: str, token: str, message: str) -> None:
-    github_request(
+def post_comment(gh: GitHubClient, issue_number: int, repo: str, message: str) -> None:
+    gh.request(
         "POST",
         f"/repos/{repo}/issues/{issue_number}/comments",
-        token,
         json={"body": message},
     )
 
 
+def parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser(
+        description="Process a GitHub issue submission into a PR"
+    )
+    parser.add_argument("--issue-number", type=int, required=True, metavar="N")
+    parser.add_argument("--repo", required=True, metavar="OWNER/REPO")
+    parser.add_argument("--issue-body", required=True, metavar="TEXT")
+    parser.add_argument("--validate-only", action="store_true")
+    return parser.parse_args()
+
+
 def main() -> int:
+    args = parse_args()
     token = os.environ.get("GITHUB_TOKEN")
-    issue_body = os.environ.get("ISSUE_BODY")
-    issue_number_raw = os.environ.get("ISSUE_NUMBER")
-    repo = os.environ.get("REPO_FULL_NAME")
-
-    missing = [
-        name
-        for name, val in [
-            ("GITHUB_TOKEN", token),
-            ("ISSUE_BODY", issue_body),
-            ("ISSUE_NUMBER", issue_number_raw),
-            ("REPO_FULL_NAME", repo),
-        ]
-        if not val
-    ]
-    if missing:
-        print(f"[ERROR] Missing required environment variables: {', '.join(missing)}")
+    if not token:
+        print("[ERROR] GITHUB_TOKEN environment variable is required")
         return 1
 
-    issue_number = int(issue_number_raw)  # type: ignore[arg-type]
+    validate_only = args.validate_only
+    mode = "validate-only" if validate_only else "full"
+    print(
+        f"[INFO] Processing issue #{args.issue_number} from {args.repo} (mode: {mode})"
+    )
 
-    print(f"[INFO] Processing issue #{issue_number} from {repo}")
+    parsed = parse_issue_body(args.issue_body)
+    retrigger_label = LABEL_CHECK if validate_only else LABEL_APPROVED
 
-    parsed = parse_issue_body(issue_body)  # type: ignore[arg-type]
+    with GitHubClient(token) as gh:
+        if not parsed.get("project_name") or not parsed.get("url_repository"):
+            msg = f"Could not parse required fields (Project Name, Repository URL) from the issue body. Please check the issue format and re-trigger by removing and re-adding the `{retrigger_label}` label."
+            post_comment(
+                gh,
+                args.issue_number,
+                args.repo,
+                f":x: **Submission check failed**\n\n{msg}",
+            )
+            return 1
 
-    if not parsed.get("project_name") or not parsed.get("url_repository"):
-        msg = "Could not parse required fields (Project Name, Repository URL) from the issue body. Please check the issue format and re-trigger by removing and re-adding the `approved-submission` label."
-        post_comment(issue_number, repo, token, f":x: **Submission failed**\n\n{msg}")  # type: ignore[arg-type]
-        return 1
+        filename = generate_filename(parsed["project_name"], parsed["url_repository"])
+        print(f"[INFO] Generated filename: {filename}")
 
-    filename = generate_filename(parsed["project_name"], parsed["url_repository"])  # type: ignore[arg-type]
-    print(f"[INFO] Generated filename: {filename}")
+        json_data = build_project_json(parsed, filename)
 
-    json_data = build_project_json(parsed, filename)
+        errors = validate_json(json_data)
+        if errors:
+            error_list = "\n".join(f"- {e}" for e in errors)
+            if validate_only:
+                msg = f":x: **Validation failed**\n\n{error_list}\n\nFix the issue body and re-trigger by removing and re-adding the `{LABEL_CHECK}` label."
+            else:
+                msg = f":x: **Submission failed — validation errors**\n\n{error_list}\n\nFix the issue body and re-trigger by removing and re-adding the `{LABEL_APPROVED}` label."
+            post_comment(gh, args.issue_number, args.repo, msg)
+            print(f"[ERROR] Validation failed: {errors}")
+            return 1
 
-    errors = validate_json(json_data)
-    if errors:
-        error_list = "\n".join(f"- {e}" for e in errors)
-        msg = f":x: **Submission failed — validation errors**\n\n{error_list}\n\nFix the issue body and re-trigger by removing and re-adding the `approved-submission` label."
-        post_comment(issue_number, repo, token, msg)  # type: ignore[arg-type]
-        print(f"[ERROR] Validation failed: {errors}")
-        return 1
+        if validate_only:
+            msg = f":white_check_mark: **Validation passed!**\n\nThe submission is valid. A maintainer can now add the `{LABEL_APPROVED}` label to create the PR."
+            post_comment(gh, args.issue_number, args.repo, msg)
+            print("[INFO] Validation passed (validate-only mode, skipping PR creation)")
+            return 0
 
-    print("[INFO] Validation passed, creating PR...")
-    pr_url = create_pr(json_data, filename, issue_number, repo, token)  # type: ignore[arg-type]
-
-    msg = f":white_check_mark: **Submission processed!**\n\nA pull request has been opened: {pr_url}\n\nThe PR will be reviewed and merged by a maintainer."
-    post_comment(issue_number, repo, token, msg)  # type: ignore[arg-type]
-    print(f"[INFO] PR created: {pr_url}")
-    return 0
+        print("[INFO] Validation passed, creating PR...")
+        pr_url = create_pr(gh, json_data, filename, args.issue_number, args.repo)
+        msg = f":white_check_mark: **Submission processed!**\n\nA pull request has been opened: {pr_url}\n\nThe PR will be reviewed and merged by a maintainer."
+        post_comment(gh, args.issue_number, args.repo, msg)
+        print(f"[INFO] PR created: {pr_url}")
+        return 0
 
 
 if __name__ == "__main__":

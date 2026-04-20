@@ -276,16 +276,6 @@ body:
     validations:
       required: true
 
-  # --- Optional fields ---
-
-  - type: input
-    id: owner_name
-    attributes:
-      label: Owner Name
-      placeholder: e.g. Fabrizio Cafolla
-    validations:
-      required: false
-
   - type: dropdown
     id: owner_type
     attributes:
@@ -295,7 +285,17 @@ body:
         - community
         - organization
     validations:
-      required: false
+      required: true
+
+  # --- Optional fields ---
+
+  - type: input
+    id: owner_name
+    attributes:
+      label: Owner Name
+      placeholder: e.g. E-Corp
+    validations:
+      required: true
 
   - type: textarea
     id: owner_description

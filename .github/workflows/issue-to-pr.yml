@@ -7,7 +7,7 @@ on:
 jobs:
   process-submission:
     name: Process Submission
-    if: github.event.label.name == 'approved-submission'
+    if: contains(fromJSON('["check-submission", "approved-submission"]'), github.event.label.name)
     runs-on: ubuntu-24.04
     timeout-minutes: 10
     permissions:
@@ -23,7 +23,7 @@ jobs:
         id: setup-python
         uses: actions/setup-python@v5
         with:
-          python-version-file: ".python-version"
+          python-version-file: '.python-version'
 
       - name: Setup Uv
         id: setup-uv
@@ -37,11 +37,16 @@ jobs:
       - name: Setup environment
         run: uv sync --all-extras
 
-      - name: Run issue-to-pr script
+      - name: Run script
         env:
-          ISSUE_NUMBER: ${{ github.event.issue.number }}
           ISSUE_BODY: ${{ github.event.issue.body }}
-          ISSUE_TITLE: ${{ github.event.issue.title }}
-          REPO_FULL_NAME: ${{ github.repository }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: uv run python scripts/issue_to_pr.py
+        run: |
+          VALIDATE_FLAG=""
+          if [ "${{ github.event.label.name }}" = "check-submission" ]; then
+            VALIDATE_FLAG="--validate-only"
+          fi
+          uv run python scripts/issue_to_pr.py $VALIDATE_FLAG \
+            --issue-number "${{ github.event.issue.number }}" \
+            --repo "${{ github.repository }}" \
+            --issue-body "$ISSUE_BODY" \
