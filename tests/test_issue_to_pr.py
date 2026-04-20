@@ -16,6 +16,23 @@ from issue_to_pr import (
 
 MAX_TAGS = 10
 ISSUE_NUMBER = 42
+REPO = "European-OpenSource/awesome-european-opensource"
+MOCK_ENV = {"GITHUB_TOKEN": "fake-token"}
+
+
+def _argv(issue_body: str = "", validate_only: bool = False) -> list[str]:
+    args = [
+        "issue_to_pr.py",
+        "--issue-number",
+        str(ISSUE_NUMBER),
+        "--repo",
+        REPO,
+        "--issue-body",
+        issue_body,
+    ]
+    if validate_only:
+        args.append("--validate-only")
+    return args
 
 
 # ---------------------------------------------------------------------------
@@ -191,9 +208,8 @@ class TestBuildProjectJson:
         assert data["metadata"]["filepath"] == "awesome/projects/testapp-abc123.json"
         assert "created_at" in data["metadata"]
 
-    def test_owner_defaults_when_missing(self):
+    def test_owner_type_defaults_to_individual_when_missing(self):
         data = build_project_json(self._parsed(), "f.json")
-        assert data["owner"]["name"] == "TestApp"
         assert data["owner"]["type"] == "individual"
 
     def test_owner_fields_used_when_provided(self):
@@ -292,28 +308,18 @@ class TestValidateJson:
 # ---------------------------------------------------------------------------
 
 
-MOCK_ENV = {
-    "GITHUB_TOKEN": "fake-token",
-    "ISSUE_BODY": "",
-    "ISSUE_NUMBER": "42",
-    "REPO_FULL_NAME": "European-OpenSource/awesome-european-opensource",
-}
-
-
 class TestMain:
-    def test_exits_1_when_env_vars_missing(self):
-        with patch.dict(os.environ, {}, clear=True):
-            assert main() == 1
-
     def test_exits_1_when_token_missing(self):
-        env = {k: v for k, v in MOCK_ENV.items() if k != "GITHUB_TOKEN"}
-        with patch.dict(os.environ, env, clear=True):
+        with (
+            patch("sys.argv", _argv()),
+            patch.dict(os.environ, {}, clear=True),
+        ):
             assert main() == 1
 
     def test_exits_1_and_posts_comment_when_body_unparseable(self):
-        env = {**MOCK_ENV, "ISSUE_BODY": "this body has no structured fields"}
         with (
-            patch.dict(os.environ, env, clear=True),
+            patch("sys.argv", _argv("this body has no structured fields")),
+            patch.dict(os.environ, MOCK_ENV, clear=True),
             patch("issue_to_pr.post_comment") as mock_comment,
         ):
             result = main()
@@ -323,9 +329,9 @@ class TestMain:
 
     def test_exits_1_and_posts_comment_on_validation_failure(self, valid_issue_body):
         bad_body = valid_issue_body.replace("MIT", "NOT-A-REAL-LICENSE")
-        env = {**MOCK_ENV, "ISSUE_BODY": bad_body}
         with (
-            patch.dict(os.environ, env, clear=True),
+            patch("sys.argv", _argv(bad_body)),
+            patch.dict(os.environ, MOCK_ENV, clear=True),
             patch("issue_to_pr.post_comment") as mock_comment,
         ):
             result = main()
@@ -338,15 +344,13 @@ class TestMain:
         fake_pr_url = (
             "https://github.com/European-OpenSource/awesome-european-opensource/pull/99"
         )
-        env = {**MOCK_ENV, "ISSUE_BODY": valid_issue_body}
-
         with (
-            patch.dict(os.environ, env, clear=True),
+            patch("sys.argv", _argv(valid_issue_body)),
+            patch.dict(os.environ, MOCK_ENV, clear=True),
             patch("issue_to_pr.create_pr", return_value=fake_pr_url) as mock_pr,
             patch("issue_to_pr.post_comment") as mock_comment,
         ):
             result = main()
-
         assert result == 0
         mock_pr.assert_called_once()
         mock_comment.assert_called_once()
@@ -357,15 +361,14 @@ class TestMain:
         fake_pr_url = (
             "https://github.com/European-OpenSource/awesome-european-opensource/pull/42"
         )
-        env = {**MOCK_ENV, "ISSUE_BODY": valid_issue_body}
-
         with (
-            patch.dict(os.environ, env, clear=True),
+            patch("sys.argv", _argv(valid_issue_body)),
+            patch.dict(os.environ, MOCK_ENV, clear=True),
             patch("issue_to_pr.create_pr", return_value=fake_pr_url) as mock_pr,
             patch("issue_to_pr.post_comment"),
         ):
             main()
-
-        _, _, issue_number, repo, _ = mock_pr.call_args[0]
+        # create_pr(gh, json_data, filename, issue_number, repo)
+        _, _, _, issue_number, repo = mock_pr.call_args[0]
         assert issue_number == ISSUE_NUMBER
-        assert repo == "European-OpenSource/awesome-european-opensource"
+        assert repo == REPO
