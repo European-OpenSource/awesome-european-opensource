@@ -4,7 +4,7 @@
 
 ## How to Contribute
 
-- **🚀 I want to submit a project**: [Fill out the form](https://awesome-european-opensource/form)
+- **🚀 I want to submit a project**: [Open a GitHub Issue](https://github.com/European-OpenSource/awesome-european-opensource/issues/new?template=PROJECT_SUBMISSION.yml)
 - **✏️ I want to update a project**: [Open an Issue](https://github.com/European-OpenSource/awesome-european-opensource/issues/new?template=PROJECT_UPDATE.yml)
 - **🗑️ I want to remove a project**: [Open an Issue](https://github.com/European-OpenSource/awesome-european-opensource/issues/new?template=PROJECT_REMOVAL.yml)
 - **❓ I have a question:** Ask in [Open an Issue](https://github.com/European-OpenSource/awesome-european-opensource/issues/new?template=QUESTION.yml)
@@ -64,22 +64,20 @@ When you've identified an issue and you want to work on it here's how you can ge
 - Keep functions small and focused
 - Follow the project's ESLint configuration
 
-### How to add new project
+### How to add a new project
 
-1. Download csv from [tally.so](https://tally.so)
-2. Save csv file into `imports/` directory (if doesn't exist create it)
-3. Execute `just import --csv imports/<filename>`
-4. Check and validate the output
-5. Create a pull-request (It would be better to create a single MR for each project.)
+The preferred way to submit a project is via GitHub Issue — the process is fully automated.
 
-   ```bash
-   git checkout -b feat/add-projects-$(date +%m-%d-%Y-%s)
-   git add .
-   just test
-   git commit -m "feat(awesome:projects): import projects"
-   ```
+#### Via GitHub Issue (recommended)
 
-6. When the pull request is closed, the workflow [sync-europeanopensource-eu.yml](.github/workflows/sync-europeanopensource-eu.yml) is triggered, which in turn activates a specific workflow on the [europeanopensource.eu](https://github.com/European-OpenSource/europeanopensource.eu) repository.
+1. [Open a submission issue](https://github.com/European-OpenSource/awesome-european-opensource/issues/new?template=PROJECT_SUBMISSION.yml) and fill in all the required fields.
+2. A maintainer will add the `check-submission` label to trigger automated validation. The bot will post a comment with the result.
+3. If validation passes, the maintainer adds the `approved-submission` label. The CI will automatically create a pull request with the project JSON file.
+4. Once the PR is merged, the workflow [sync-europeanopensource-eu.yml](.github/workflows/sync-europeanopensource-eu.yml) syncs the data to [europeanopensource.eu](https://github.com/European-OpenSource/europeanopensource.eu).
+
+#### Via Tally form (deprecated)
+
+You can still submit a project via the [Tally form](https://europeanopensource.eu/form). Submissions received there are periodically reviewed by a maintainer, who will create a GitHub Issue on your behalf and run the same automated process described above. This path is less prioritised and takes longer to validate.
 
 ## Join our Community
 
