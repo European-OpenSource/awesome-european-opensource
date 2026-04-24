@@ -1,0 +1,37 @@
+{
+  "name": "SquashTM",
+  "description": "SquashTM is an open-core test management solution that centralises all testing activities, from requirements to execution results. It lets teams build a structured, reusable test repository, manage campaigns across manual, automated, and exploratory testing, and maintain full traceability between requirements and test coverage. Agnostic by design, it integrates with GitLab, OpenProject (Q1 2027), Jira, Jenkins and other CI/CD tools, supporting Agile, V-model, and hybrid methodologies. On-premise or cloud.",
+  "category": "app",
+  "country": "France",
+  "source": {
+    "platform": "GitLab",
+    "url_repository": "https://gitlab.com/henixdevelopment/open-source/squash",
+    "license": "LGPL-3.0",
+    "language": "Java",
+    "url_documentation": "https://tm-en.doc.squashtest.com/latest/"
+  },
+  "owner": {
+    "name": "Henix",
+    "type": "organization",
+    "description": "Henix is a self-funded French software quality specialist founded in 1999. Testing is Henix's core business. The company combines a tool editing solution: SquashTM ; with hands-on QA and DevOps consulting (450 consultants entirely based in France), and professional training through its own software quality school, the EQL.",
+    "url_website": "https://www.squashtm.com/en",
+    "is_a_startup": false
+  },
+  "metadata": {
+    "filename": "squashtm-fb9926.json",
+    "filepath": "awesome/projects/squashtm-fb9926.json",
+    "created_at": "2026-04-24T14:21:29Z"
+  },
+  "tags": [
+    "test management",
+    "software testing",
+    "test automation",
+    "agile testing",
+    "qa",
+    "devops",
+    "ci/cd",
+    "requirements",
+    "test cases",
+    "bugtracking"
+  ]
+}
