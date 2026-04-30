@@ -1,4 +1,4 @@
-"""Script to parse a GitHub Issue submission and open a PR with the project JSON file."""
+"""Parse a GitHub Issue submission and open a PR with the project JSON file."""
 
 import argparse
 import base64
@@ -12,7 +12,7 @@ import httpx
 
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from importer import (
+from utils import (
     generate_filename,
     get_timestamp,
     sanitize_description,
@@ -85,7 +85,6 @@ def normalize_tags(raw: str | None) -> list[str]:
 
 
 def parse_country(raw: str | None) -> list[str]:
-    """Split comma-separated country input into a list of sanitized strings."""
     if not raw:
         return []
     return [sanitize_text(c) for c in raw.split(",") if sanitize_text(c)]
