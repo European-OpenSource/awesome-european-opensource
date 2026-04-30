@@ -1,7 +1,9 @@
 {
   "name": "CertMate",
   "category": "framework",
-  "country": "Italy",
+  "country": [
+    "Italy"
+  ],
   "description": "SSL Certificate Management System (API UI)",
   "source": {
     "platform": "GitHub",

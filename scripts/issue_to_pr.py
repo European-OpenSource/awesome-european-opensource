@@ -84,12 +84,19 @@ def normalize_tags(raw: str | None) -> list[str]:
     return result
 
 
+def parse_country(raw: str | None) -> list[str]:
+    """Split comma-separated country input into a list of sanitized strings."""
+    if not raw:
+        return []
+    return [sanitize_text(c) for c in raw.split(",") if sanitize_text(c)]
+
+
 def build_project_json(parsed: dict[str, Any], filename: str) -> dict[str, Any]:
     data: dict[str, Any] = {
         "name": sanitize_name(parsed["project_name"] or ""),
         "description": sanitize_description(parsed["description"] or ""),
         "category": sanitize_text(parsed["category"] or "").lower(),
-        "country": sanitize_text(parsed["country"] or ""),
+        "country": parse_country(parsed.get("country")),
         "source": {
             "platform": sanitize_text(parsed["platform"] or ""),
             "url_repository": sanitize_text(parsed["url_repository"] or ""),

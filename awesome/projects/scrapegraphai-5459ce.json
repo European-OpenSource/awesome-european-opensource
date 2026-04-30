@@ -1,7 +1,9 @@
 {
   "name": "ScrapeGraphAI",
   "category": "ai",
-  "country": "Italy",
+  "country": [
+    "Italy"
+  ],
   "description": "ScrapeGraphAI is a Python library for AI-powered web scraping that uses LLMs to extract structured data from websites, PDFs, and raw HTML via natural language queries. Built by an Italian team in Padua, it supports OpenAI, Gemini, Ollama, and Anthropic, eliminating the need for fragile CSS or XPath selectors.",
   "source": {
     "platform": "GitHub",

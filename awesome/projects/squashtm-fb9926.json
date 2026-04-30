@@ -2,7 +2,9 @@
   "name": "SquashTM",
   "description": "SquashTM is an open-core test management solution that centralises all testing activities, from requirements to execution results. It lets teams build a structured, reusable test repository, manage campaigns across manual, automated, and exploratory testing, and maintain full traceability between requirements and test coverage. Agnostic by design, it integrates with GitLab, OpenProject (Q1 2027), Jira, Jenkins and other CI/CD tools, supporting Agile, V-model, and hybrid methodologies. On-premise or cloud.",
   "category": "app",
-  "country": "France",
+  "country": [
+    "France"
+  ],
   "source": {
     "platform": "GitLab",
     "url_repository": "https://gitlab.com/henixdevelopment/open-source/squash",

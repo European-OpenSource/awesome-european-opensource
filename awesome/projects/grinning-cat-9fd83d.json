@@ -2,7 +2,9 @@
   "name": "Grinning Cat",
   "description": "Build production-ready AI agents in minutes, not months. Grinning Cat is a multi-tenant microservice for deploying scalable chatbots with advanced RAG capabilities. Manage multiple chatbots with isolated settings, plugins, and LLMs. Process any document type - PDFs, images, audio, and more. Cloud-native and dockerized with single-command deployment.",
   "category": "framework",
-  "country": "Italy",
+  "country": [
+    "Italy"
+  ],
   "source": {
     "platform": "GitHub",
     "url_repository": "https://www.github.com/matteocacciola/grinning-cat-core",
