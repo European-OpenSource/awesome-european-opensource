@@ -1,7 +1,9 @@
 {
   "name": "LibreOffice",
   "category": "app",
-  "country": "Germany",
+  "country": [
+    "Germany"
+  ],
   "description": "LibreOffice is a free, open source and private office suite, used by millions of people around the world and the successor to OpenOffice. It is made by a worldwide community and backed by a non-profit organisation (The Document Foundation).",
   "source": {
     "platform": "Other",

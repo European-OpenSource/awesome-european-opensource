@@ -1,7 +1,9 @@
 {
   "name": "Cheshire Cat AI",
   "category": "ai",
-  "country": "Italy",
+  "country": [
+    "Italy"
+  ],
   "description": "Python framework to build AI agents and publish them on the web. Multi-user, multi-agent, extensible via plugins, supports MCP and A2A protocols.",
   "source": {
     "platform": "GitHub",

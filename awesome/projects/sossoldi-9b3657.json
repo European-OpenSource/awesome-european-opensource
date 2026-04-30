@@ -1,7 +1,9 @@
 {
   "name": "Sossoldi",
   "category": "app",
-  "country": "Italy",
+  "country": [
+    "Italy"
+  ],
   "description": "Sossoldi is a free and open source wealth management / personal finance / Net Worth tracking app, made with Flutter.",
   "source": {
     "platform": "GitHub",

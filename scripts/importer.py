@@ -302,11 +302,19 @@ class ProjectImporter(Importer):
         # Generate relative path from project root for metadata
         relative_filepath = os.path.relpath(absolute_filepath, PROJECT_ROOTDIR)
 
+        # Parse country as array (comma-separated values allowed)
+        raw_country = row.get("Country", "")
+        countries = [
+            sanitize_text(c) for c in raw_country.split(",") if sanitize_text(c)
+        ]
+        if not countries:
+            raise ValueError(f"Country field is empty for project '{name}'")
+
         # Build base project structure
         project_data = {
             "name": name,
             "category": sanitize_text(row["Category"]).lower(),
-            "country": sanitize_text(row["Country"]),
+            "country": countries,
             "description": sanitize_description(row.get("Description", "")),
             "source": {
                 "platform": sanitize_text(row["Platform"]),

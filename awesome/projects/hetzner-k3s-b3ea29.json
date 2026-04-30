@@ -2,7 +2,9 @@
   "name": "hetzner-k3s",
   "description": "hetzner-k3s is a CLI tool that creates production-ready Kubernetes clusters on Hetzner Cloud in minutes, not hours. No Terraform to learn, no management cluster required, no third-party access to your credentials.",
   "category": "cli",
-  "country": "Germany",
+  "country": [
+    "Germany"
+  ],
   "source": {
     "platform": "GitHub",
     "url_repository": "https://github.com/vitobotta/hetzner-k3s",

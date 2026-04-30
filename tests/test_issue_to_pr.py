@@ -8,6 +8,7 @@ from issue_to_pr import (
     generate_filename,
     main,
     normalize_tags,
+    parse_country,
     parse_field,
     parse_issue_body,
     validate_json,
@@ -172,6 +173,30 @@ class TestNormalizeTags:
 # ---------------------------------------------------------------------------
 
 
+class TestParseCountry:
+    def test_single_country(self):
+        assert parse_country("Italy") == ["Italy"]
+
+    def test_multi_country_comma_separated(self):
+        assert parse_country("Italy, Germany") == ["Italy", "Germany"]
+
+    def test_trims_whitespace(self):
+        assert parse_country("  Italy ,  France  ") == ["Italy", "France"]
+
+    def test_none_returns_empty(self):
+        assert parse_country(None) == []
+
+    def test_empty_string_returns_empty(self):
+        assert parse_country("") == []
+
+    def test_no_response_like_value_returns_empty(self):
+        assert parse_country("_No response_") == ["_No response_"]
+
+    def test_three_countries(self):
+        result = parse_country("Italy, Germany, France")
+        assert result == ["Italy", "Germany", "France"]
+
+
 class TestBuildProjectJson:
     def _parsed(self, **overrides):
         base = {
@@ -201,6 +226,18 @@ class TestBuildProjectJson:
         assert data["category"] == "app"
         assert data["source"]["platform"] == "GitHub"
         assert data["source"]["license"] == "MIT"
+
+    def test_country_single_produces_array(self):
+        data = build_project_json(self._parsed(country="Italy"), "f.json")
+        assert data["country"] == ["Italy"]
+
+    def test_country_multi_produces_array(self):
+        data = build_project_json(self._parsed(country="Italy, Germany"), "f.json")
+        assert data["country"] == ["Italy", "Germany"]
+
+    def test_country_none_produces_empty_array(self):
+        data = build_project_json(self._parsed(country=None), "f.json")
+        assert data["country"] == []
 
     def test_metadata_fields(self):
         data = build_project_json(self._parsed(), "testapp-abc123.json")
@@ -259,7 +296,7 @@ class TestValidateJson:
             "name": "TestApp",
             "description": "A test application for the catalog.",
             "category": "app",
-            "country": "Italy",
+            "country": ["Italy"],
             "source": {
                 "platform": "GitHub",
                 "url_repository": "https://github.com/owner/testapp",
@@ -277,6 +314,26 @@ class TestValidateJson:
     def test_valid_data_returns_no_errors(self):
         errors = validate_json(self._valid_data())
         assert errors == []
+
+    def test_multi_country_array_valid(self):
+        data = self._valid_data()
+        data["country"] = ["Italy", "Germany"]
+        assert validate_json(data) == []
+
+    def test_country_string_returns_error(self):
+        data = self._valid_data()
+        data["country"] = "Italy"
+        assert len(validate_json(data)) > 0
+
+    def test_country_invalid_enum_value_returns_error(self):
+        data = self._valid_data()
+        data["country"] = ["Narnia"]
+        assert len(validate_json(data)) > 0
+
+    def test_country_more_than_3_returns_error(self):
+        data = self._valid_data()
+        data["country"] = ["Italy", "Germany", "France", "Spain"]
+        assert len(validate_json(data)) > 0
 
     def test_invalid_license_returns_error(self):
         data = self._valid_data()
