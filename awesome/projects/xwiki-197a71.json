@@ -1,0 +1,37 @@
+{
+  "name": "XWiki",
+  "description": "XWiki is a second-generation open-source wiki platform built in Java, enabling organizations to build intranets, knowledge bases, digital workplaces, and custom collaborative solutions. It offers structured data, extensions, scripting, and full data sovereignty with self-hosted or cloud deployment.",
+  "category": "app",
+  "country": [
+    "France"
+  ],
+  "source": {
+    "platform": "GitHub",
+    "url_repository": "https://github.com/xwiki/xwiki-platform",
+    "license": "LGPL-2.1",
+    "language": "Java",
+    "url_documentation": "https://www.xwiki.org/xwiki/bin/view/Documentation/"
+  },
+  "owner": {
+    "name": "XWiki SAS",
+    "type": "organization",
+    "description": "XWiki SAS is a French open-source company founded in 2004, headquartered in Paris. It develops privacy-first, ethical collaboration software including XWiki, CryptPad, and Cristal. Registered in the Trade and Companies' Register of Paris under n 477 865 281.",
+    "url_website": "https://www.xwiki.com",
+    "is_a_startup": false
+  },
+  "metadata": {
+    "filename": "xwiki-197a71.json",
+    "filepath": "awesome/projects/xwiki-197a71.json",
+    "created_at": "2026-04-30T21:21:34Z"
+  },
+  "tags": [
+    "wiki",
+    "knowledge-management",
+    "collaboration",
+    "intranet",
+    "self-hosted",
+    "java",
+    "digital-workplace",
+    "privacy"
+  ]
+}
