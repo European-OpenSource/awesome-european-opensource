@@ -1,0 +1,39 @@
+{
+  "name": "Freelens",
+  "description": "Freelens is a free and open-source graphical IDE for Kubernetes cluster management, forked from OpenLens to preserve a fully community-driven development. It delivers an intuitive cross-platform interface (macOS, Windows, Linux) with a rich extension ecosystem. Actively maintained by a European core team with a vendor-neutral, transparency-first philosophy aligned with cloud-native standards.",
+  "category": "app",
+  "country": [
+    "Italy"
+  ],
+  "source": {
+    "platform": "GitHub",
+    "url_repository": "https://github.com/freelensapp/freelens",
+    "license": "MIT",
+    "language": "TypeScript",
+    "url_documentation": "https://freelensapp.github.io/docs/"
+  },
+  "owner": {
+    "name": "Freelensapp",
+    "type": "community",
+    "description": "A volunteer-driven community of developers and cloud-native enthusiasts building a transparent, accessible Kubernetes experience. Operates openly on GitHub with contributors from across Europe and beyond.",
+    "url_website": "https://freelens.app/",
+    "is_a_startup": false
+  },
+  "metadata": {
+    "filename": "freelens-962eae.json",
+    "filepath": "awesome/projects/freelens-962eae.json",
+    "created_at": "2026-04-30T21:21:49Z"
+  },
+  "tags": [
+    "kubernetes",
+    "cloud-native",
+    "ide",
+    "cluster-management",
+    "cross-platform",
+    "extensions",
+    "k8s",
+    "gui",
+    "devtools",
+    "typescript"
+  ]
+}
