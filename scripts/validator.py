@@ -1,9 +1,4 @@
-"""
-Validation module for awesome-european-opensource entities.
-
-Provides a flexible validation framework that can be extended for different entity types
-(projects, events, companies, etc.) using JSON Schema validation.
-"""
+"""Validation module for awesome-european-opensource entities."""
 
 import json
 import os
@@ -17,35 +12,18 @@ PROJECT_ROOTDIR = os.path.dirname(os.path.abspath(__file__).replace("scripts/", 
 
 
 def get_jsonschema(name: str) -> dict[str, Any]:
-    """Load JSON schema from schemas directory.
-
-    Args:
-        name: Schema name (without .json extension)
-
-    Returns:
-        Parsed JSON schema as dictionary
-
-    Raises:
-        FileNotFoundError: If schema file doesn't exist
-    """
     schema_path = f"{PROJECT_ROOTDIR}/schemas/{name}.json"
     with open(schema_path, encoding="utf-8") as f:
         return json.load(f)
 
 
 class Validator:
-    """Base validator class for entities using JSON Schema validation.
-
-    Subclasses should define:
-        - schema_name: Name of the JSON schema file (without .json)
-        - source_filepath: Default directory path for validation
-    """
+    """Base validator using JSON Schema. Subclasses must define `schema_name` and `source_filepath`."""
 
     schema_name: str | None = None
     source_filepath: str | None = None
 
     def __init__(self) -> None:
-        """Initialize validator with compiled JSON schema."""
         if self.schema_name is None:
             raise NotImplementedError("schema_name must be defined in subclass")
 
@@ -63,15 +41,10 @@ class Validator:
         }
 
     def save_state(self, name: str, message: str, key: str = "errors") -> None:
-        """Persist a validation outcome.
-
-        Args:
-            name: Entity name for identification
-            message: Error or warning message
-            key: Either "errors" or "warnings"
+        """Persist a validation outcome to metadata.
 
         Raises:
-            ValueError: If key is not "errors" or "warnings"
+            ValueError: If key is not "errors" or "warnings".
         """
         if key not in ("errors", "warnings"):
             raise ValueError(f"Unsupported key '{key}' in save_state")
@@ -90,24 +63,24 @@ class Validator:
         data: dict[str, Any] | None = None,
         check_file_exists: bool = True,
     ) -> tuple[dict[str, Any] | None, list[dict[str, str]] | None]:
-        """Validate entity data against JSON schema.
+        """Validate entity data against the JSON schema.
 
         Args:
-            filename: Path to JSON file to validate
-            data: Dictionary data to validate directly
-            check_file_exists: Whether to check if file already exists (for duplicate detection).
-                              Set to False when validating existing files from directory.
+            filename: Path to a JSON file to validate.
+            data: Dictionary to validate directly (mutually exclusive with filename).
+            check_file_exists: When True, warns if the output file already exists
+                (duplicate detection during import). Set False when validating
+                files that are expected to be on disk.
 
         Returns:
-            Tuple of (validated_data, errors) where errors is None on success
+            (validated_data, None) on success; (None, errors) on failure.
 
         Raises:
-            ValueError: If neither filename nor data provided
+            ValueError: If neither filename nor data is provided.
         """
         if not filename and not data:
             raise ValueError("You must provide either filename or data")
 
-        # Load data from file if filename provided
         if filename:
             if not os.path.isfile(filename):
                 print(f"  [WARN] Not found {os.path.basename(filename)}")
@@ -130,10 +103,9 @@ class Validator:
             else:
                 data["owner"]["is_a_startup"] = False
 
-            # Validate against schema
             self.schema_configuration(data)
 
-            # Check for duplicate files only if requested (e.g., during import)
+            # check_file_exists=False when validating existing files from directory
             if (
                 check_file_exists
                 and "metadata" in data
@@ -173,23 +145,11 @@ class Validator:
             self.metadata["total"] += 1
 
     def execute(self, dirpath: str) -> dict[str, dict[str, Any]]:
-        """Execute validation on all JSON files in directory.
-
-        Args:
-            dirpath: Directory containing JSON files to validate
-
-        Returns:
-            Dictionary mapping entity IDs to validated data
-
-        Raises:
-            NotADirectoryError: If dirpath is not a valid directory
-        """
         print(f"[INFO] Validating {dirpath} directory")
 
         if not os.path.isdir(dirpath):
             raise NotADirectoryError(f"Directory not found: {dirpath}")
 
-        # Collect valid JSON files
         json_files = []
         for entry in os.listdir(dirpath):
             filepath = os.path.join(dirpath, entry)
@@ -209,7 +169,7 @@ class Validator:
             entity_id = entry.replace(".json", "")
             json_files.append((entity_id, filepath))
 
-        # Validate files in sorted order (don't check if file exists - we're validating existing files)
+        # sorted for deterministic output; check_file_exists=False since these files already exist
         for entity_id, filepath in sorted(json_files, key=lambda x: x[0]):
             validated_data, _ = self.validate(
                 filename=filepath, check_file_exists=False
@@ -220,7 +180,6 @@ class Validator:
         return self.source_data
 
     def print(self) -> None:
-        """Print validation summary and details."""
         entity_type = self.schema_name or "entities"
 
         print(f"\n[INFO] === Validation Summary for {entity_type} ===")
@@ -242,11 +201,6 @@ class Validator:
                 print(f"  ⚠ {warning['name']}: {warning['message']}")
 
     def run(self) -> None:
-        """Execute validation workflow and print results.
-
-        Raises:
-            NotImplementedError: If source_filepath not defined in subclass
-        """
         if self.source_filepath is None:
             raise NotImplementedError("source_filepath must be defined in subclass")
 
@@ -254,11 +208,7 @@ class Validator:
         self.print()
 
     def raise_on_error(self) -> None:
-        """Raise exception if validation found errors.
-
-        Raises:
-            RuntimeError: If any validation errors occurred
-        """
+        """Raise RuntimeError if any validation errors occurred."""
         sys.tracebacklimit = 0
         if self.metadata["failed"] > 0:
             raise RuntimeError(
@@ -267,11 +217,9 @@ class Validator:
 
     @property
     def data(self) -> dict[str, dict[str, Any]]:
-        """Get validated entity data."""
         return self.source_data
 
     def __str__(self) -> str:
-        """String representation of validator state."""
         return (
             f"Validator({self.schema_name}): "
             f"{self.metadata['success']}/{self.metadata['total']} successful, "
@@ -281,26 +229,11 @@ class Validator:
 
 
 class ProjectValidator(Validator):
-    """Validator for open-source project entities."""
-
     schema_name = "project"
     source_filepath = f"{PROJECT_ROOTDIR}/awesome/projects"
 
 
-# Example: Additional validator types can be easily added
-# class EventValidator(Validator):
-#     """Validator for event entities."""
-#     schema_name = "event"
-#     source_filepath = f"{PROJECT_ROOTDIR}/awesome/events"
-#
-# class CompanyValidator(Validator):
-#     """Validator for company entities."""
-#     schema_name = "company"
-#     source_filepath = f"{PROJECT_ROOTDIR}/awesome/companies"
-
-
 def main() -> int:
-    """Main entry point for validation script."""
     try:
         projects = ProjectValidator()
         projects.run()

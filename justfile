@@ -22,7 +22,3 @@ test:
     @just lint
     @just validator
     @just unit-test
-
-# Import projects - pass additional arguments to the importer script
-import *args:
-    @uv run scripts/importer.py {{args}}
