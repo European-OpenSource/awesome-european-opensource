@@ -1,0 +1,32 @@
+{
+  "name": "Mango",
+  "description": "Mango is an AI agent that turns natural language questions into MongoDB queries (NL to MQL) through an LLM-based orchestration system. It combines a FastAPI backend with real-time streaming, a three-layer vector-store memory for few-shot learning, and support for multiple LLM providers including local models via Ollama. It is read-only by design, rejecting write operations at the tool level for safe production use.",
+  "category": "app",
+  "country": [
+    "Italy"
+  ],
+  "source": {
+    "platform": "GitHub",
+    "url_repository": "https://github.com/FrancescoBellingeri/mango",
+    "license": "MIT",
+    "language": "Python",
+    "url_documentation": "https://mango.francescobellingeri.com/"
+  },
+  "owner": {
+    "name": "Francesco Bellingeri",
+    "type": "individual",
+    "url_website": "https://www.francescobellingeri.com/en",
+    "is_a_startup": false
+  },
+  "metadata": {
+    "filename": "mango-1146fa.json",
+    "filepath": "awesome/projects/mango-1146fa.json",
+    "created_at": "2026-08-26T18:03:15Z"
+  },
+  "tags": [
+    "mongodb",
+    "llm",
+    "rag",
+    "ai-agent"
+  ]
+}
