@@ -1,0 +1,35 @@
+{
+  "name": "OpenCTI",
+  "description": "OpenCTI is an open-source Cyber Threat Intelligence platform developed by Filigran in France. It structures threat data using STIX 2 standards with MITRE ATT&CK integration, enabling security teams to manage and share intelligence on adversaries, campaigns, and indicators of compromise.",
+  "category": "app",
+  "country": [
+    "France"
+  ],
+  "source": {
+    "platform": "GitHub",
+    "url_repository": "https://github.com/OpenCTI-Platform/opencti",
+    "license": "Apache-2.0",
+    "language": "TypeScript",
+    "url_documentation": "https://docs.opencti.io"
+  },
+  "owner": {
+    "name": "Filigran",
+    "type": "organization",
+    "description": "French cybersecurity company developing open-source threat intelligence and crisis management platforms.",
+    "url_website": "https://filigran.io",
+    "is_a_startup": false
+  },
+  "metadata": {
+    "filename": "opencti-1cc462.json",
+    "filepath": "awesome/projects/opencti-1cc462.json",
+    "created_at": "2026-08-26T18:00:00Z"
+  },
+  "tags": [
+    "cybersecurity",
+    "threat-intelligence",
+    "cti",
+    "stix",
+    "mitre",
+    "soc"
+  ]
+}
