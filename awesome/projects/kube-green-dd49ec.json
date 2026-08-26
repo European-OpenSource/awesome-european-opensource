@@ -1,0 +1,35 @@
+{
+  "name": "kube-green",
+  "description": "kube-green is a Kubernetes operator that automatically suspends and restarts workloads outside business hours to reduce energy consumption and cloud costs. Created by Italian maintainers and listed in the CNCF landscape, it embeds sustainability directly into Kubernetes cluster management.",
+  "category": "app",
+  "country": [
+    "Italy"
+  ],
+  "source": {
+    "platform": "GitHub",
+    "url_repository": "https://github.com/kube-green/kube-green",
+    "license": "MIT",
+    "language": "Go",
+    "url_documentation": "https://kube-green.dev/docs"
+  },
+  "owner": {
+    "name": "kube-green community",
+    "type": "community",
+    "description": "Community of Italian developers building open-source green Kubernetes tooling.",
+    "url_website": "https://kube-green.dev",
+    "is_a_startup": false
+  },
+  "metadata": {
+    "filename": "kube-green-dd49ec.json",
+    "filepath": "awesome/projects/kube-green-dd49ec.json",
+    "created_at": "2026-08-26T18:01:14Z"
+  },
+  "tags": [
+    "kubernetes",
+    "green",
+    "sustainability",
+    "operator",
+    "cncf",
+    "cloud-native"
+  ]
+}
