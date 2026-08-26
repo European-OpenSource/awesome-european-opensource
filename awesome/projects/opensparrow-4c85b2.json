@@ -1,0 +1,37 @@
+{
+  "name": "OpenSparrow",
+  "description": "OpenSparrow is an open-source, self-hosted platform designed to create internal systems, CRUD applications, admin dashboards, and calendars in minutes. Driven by a philosophy of absolute simplicity, the platform is schema-driven (generating forms and tables from configuration files) and features zero external dependencies. It is written entirely in native PHP and vanilla JavaScript, backed by a PostgreSQL database, making it extremely lightweight, fast, and secure.",
+  "category": "app",
+  "country": [
+    "Poland"
+  ],
+  "source": {
+    "platform": "GitHub",
+    "url_repository": "https://github.com/wrobeltomasz/open-sparrow",
+    "license": "LGPL-3.0",
+    "language": "PHP"
+  },
+  "owner": {
+    "name": "Tomasz Wróbel",
+    "type": "individual",
+    "url_website": "https://opensparrow.org/en/",
+    "is_a_startup": false
+  },
+  "metadata": {
+    "filename": "opensparrow-4c85b2.json",
+    "filepath": "awesome/projects/opensparrow-4c85b2.json",
+    "created_at": "2026-08-26T18:02:31Z"
+  },
+  "tags": [
+    "php",
+    "postgresql",
+    "javascript",
+    "crud",
+    "admin-panel",
+    "self-hosted",
+    "open-source",
+    "zero-dependencies",
+    "schema-driven",
+    "web-development"
+  ]
+}
