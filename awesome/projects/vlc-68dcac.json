@@ -1,0 +1,35 @@
+{
+  "name": "VLC",
+  "description": "VLC is a free, open-source, cross-platform multimedia player maintained by VideoLAN, a French non-profit. It plays virtually any audio or video format without additional codecs, runs on all major platforms, and is widely regarded as the world's most used media player.",
+  "category": "app",
+  "country": [
+    "France"
+  ],
+  "source": {
+    "platform": "GitLab",
+    "url_repository": "https://code.videolan.org/videolan/vlc",
+    "license": "GPL-2.0",
+    "language": "C",
+    "url_documentation": "https://wiki.videolan.org/Documentation:Documentation"
+  },
+  "owner": {
+    "name": "VideoLAN",
+    "type": "organization",
+    "description": "French non-profit association developing free multimedia software since 1996.",
+    "url_website": "https://www.videolan.org",
+    "is_a_startup": false
+  },
+  "metadata": {
+    "filename": "vlc-68dcac.json",
+    "filepath": "awesome/projects/vlc-68dcac.json",
+    "created_at": "2026-08-26T17:59:52Z"
+  },
+  "tags": [
+    "media-player",
+    "video",
+    "audio",
+    "cross-platform",
+    "streaming",
+    "codecs"
+  ]
+}
