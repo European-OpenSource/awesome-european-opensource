@@ -1,0 +1,35 @@
+{
+  "name": "X-Road",
+  "description": "X-Road is an open-source data exchange layer enabling secure, standardized digital communication between organizations and government systems. Developed by NIIS a joint body of Estonia and Finland it underpins national e-governance infrastructure and is adopted by governments worldwide.",
+  "category": "app",
+  "country": [
+    "Estonia"
+  ],
+  "source": {
+    "platform": "GitHub",
+    "url_repository": "https://github.com/nordic-institute/X-Road",
+    "license": "MIT",
+    "language": "Java",
+    "url_documentation": "https://x-road.global/documentation"
+  },
+  "owner": {
+    "name": "NIIS Nordic Institute for Interoperability Solutions",
+    "type": "organization",
+    "description": "Joint body of Estonia and Finland developing interoperability solutions for public sector digital infrastructure.",
+    "url_website": "https://x-road.global",
+    "is_a_startup": false
+  },
+  "metadata": {
+    "filename": "x-road-882714.json",
+    "filepath": "awesome/projects/x-road-882714.json",
+    "created_at": "2026-08-26T17:58:39Z"
+  },
+  "tags": [
+    "e-governance",
+    "interoperability",
+    "security",
+    "api",
+    "estonia",
+    "finland"
+  ]
+}
