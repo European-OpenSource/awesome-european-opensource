@@ -1,0 +1,36 @@
+{
+  "name": "Blender",
+  "description": "Blender is a free and open-source 3D creation suite maintained by the Blender Foundation in Amsterdam. It supports the full 3D pipeline modeling, rigging, animation, simulation, rendering, compositing, and motion tracking and is the leading open-source tool for film, games, and design production.",
+  "category": "app",
+  "country": [
+    "Netherlands"
+  ],
+  "source": {
+    "platform": "Gitea",
+    "url_repository": "https://projects.blender.org/blender/blender",
+    "license": "GPL-2.0",
+    "language": "C++",
+    "url_documentation": "https://docs.blender.org"
+  },
+  "owner": {
+    "name": "Blender Foundation",
+    "type": "organization",
+    "description": "Dutch non-profit foundation based in Amsterdam developing and promoting the Blender 3D suite.",
+    "url_website": "https://www.blender.org",
+    "is_a_startup": false
+  },
+  "metadata": {
+    "filename": "blender-460052.json",
+    "filepath": "awesome/projects/blender-460052.json",
+    "created_at": "2026-08-26T18:01:49Z"
+  },
+  "tags": [
+    "3d",
+    "animation",
+    "rendering",
+    "modeling",
+    "vfx",
+    "game-dev",
+    "simulation"
+  ]
+}
