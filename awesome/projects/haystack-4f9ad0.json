@@ -1,0 +1,36 @@
+{
+  "name": "Haystack",
+  "description": "Haystack is an open-source LLM orchestration framework for building production-ready AI applications such as RAG pipelines, semantic search, and question answering systems. Developed by deepset GmbH in Berlin, it provides a modular pipeline-based architecture supporting all major LLM providers.",
+  "category": "framework",
+  "country": [
+    "Germany"
+  ],
+  "source": {
+    "platform": "GitHub",
+    "url_repository": "https://github.com/deepset-ai/haystack",
+    "license": "Apache-2.0",
+    "language": "Python",
+    "url_documentation": "https://docs.haystack.deepset.ai"
+  },
+  "owner": {
+    "name": "deepset GmbH",
+    "type": "organization",
+    "description": "German AI company building open-source NLP and LLM infrastructure for enterprise use.",
+    "url_website": "https://www.deepset.ai",
+    "is_a_startup": false
+  },
+  "metadata": {
+    "filename": "haystack-4f9ad0.json",
+    "filepath": "awesome/projects/haystack-4f9ad0.json",
+    "created_at": "2026-08-26T18:00:37Z"
+  },
+  "tags": [
+    "llm",
+    "rag",
+    "ai",
+    "nlp",
+    "search",
+    "python",
+    "generative-ai"
+  ]
+}
