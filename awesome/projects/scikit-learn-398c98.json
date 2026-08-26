@@ -1,0 +1,35 @@
+{
+  "name": "scikit-learn",
+  "description": "scikit-learn is the leading Python library for machine learning, offering a consistent API for classification, regression, clustering, and dimensionality reduction. Originally developed at INRIA, the French national research institute, it is the foundational ML toolkit for the Python data science ecosystem.",
+  "category": "library",
+  "country": [
+    "France"
+  ],
+  "source": {
+    "platform": "GitHub",
+    "url_repository": "https://github.com/scikit-learn/scikit-learn",
+    "license": "BSD-3-Clause",
+    "language": "Python",
+    "url_documentation": "https://scikit-learn.org/stable/documentation.html"
+  },
+  "owner": {
+    "name": "scikit-learn community",
+    "type": "community",
+    "description": "Open-source community maintaining the scikit-learn Python ML library, with roots at INRIA France.",
+    "url_website": "https://scikit-learn.org",
+    "is_a_startup": false
+  },
+  "metadata": {
+    "filename": "scikit-learn-398c98.json",
+    "filepath": "awesome/projects/scikit-learn-398c98.json",
+    "created_at": "2026-08-26T18:00:07Z"
+  },
+  "tags": [
+    "machine-learning",
+    "python",
+    "data-science",
+    "ai",
+    "ml",
+    "inria"
+  ]
+}
