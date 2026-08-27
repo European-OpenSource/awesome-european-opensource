@@ -1,0 +1,35 @@
+{
+  "name": "Strapi",
+  "description": "Strapi is the leading open-source headless CMS built by Strapi SAS in Paris. Its community edition (MIT) provides a customizable content API with a self-hosted admin panel supporting REST and GraphQL, enabling developers to structure and deliver content to any frontend without vendor lock-in.",
+  "category": "framework",
+  "country": [
+    "France"
+  ],
+  "source": {
+    "platform": "GitHub",
+    "url_repository": "https://github.com/strapi/strapi",
+    "license": "MIT",
+    "language": "TypeScript",
+    "url_documentation": "https://docs.strapi.io"
+  },
+  "owner": {
+    "name": "Strapi SAS",
+    "type": "organization",
+    "description": "French company behind the leading open-source headless CMS.",
+    "url_website": "https://strapi.io",
+    "is_a_startup": false
+  },
+  "metadata": {
+    "filename": "strapi-69ba49.json",
+    "filepath": "awesome/projects/strapi-69ba49.json",
+    "created_at": "2026-08-26T17:59:16Z"
+  },
+  "tags": [
+    "cms",
+    "headless",
+    "api",
+    "rest",
+    "graphql",
+    "content-management"
+  ]
+}
