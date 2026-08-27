@@ -1,0 +1,36 @@
+{
+  "name": "Raspberry Pi OS",
+  "description": "Raspberry Pi OS is the official Linux-based operating system for Raspberry Pi single-board computers, maintained by the Raspberry Pi Foundation in Cambridge, UK. Based on Debian, it provides a beginner-friendly desktop and CLI environment, built and distributed through pi-gen, the open-source image build system.",
+  "category": "os",
+  "country": [
+    "United Kingdom"
+  ],
+  "source": {
+    "platform": "GitHub",
+    "url_repository": "https://github.com/RPi-Distro/pi-gen",
+    "license": "BSD-3-Clause",
+    "language": "Shell",
+    "url_documentation": "https://www.raspberrypi.com/documentation/computers/os.html"
+  },
+  "owner": {
+    "name": "Raspberry Pi Foundation",
+    "type": "organization",
+    "description": "UK charity based in Cambridge developing low-cost computers and open-source educational software.",
+    "url_website": "https://www.raspberrypi.org",
+    "is_a_startup": false
+  },
+  "metadata": {
+    "filename": "raspberry-pi-os-f35455.json",
+    "filepath": "awesome/projects/raspberry-pi-os-f35455.json",
+    "created_at": "2026-08-26T17:57:24Z"
+  },
+  "tags": [
+    "linux",
+    "os",
+    "raspberry-pi",
+    "arm",
+    "iot",
+    "education",
+    "debian"
+  ]
+}
