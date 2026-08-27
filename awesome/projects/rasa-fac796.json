@@ -1,0 +1,35 @@
+{
+  "name": "Rasa",
+  "description": "Rasa is an open-source framework for building production-grade conversational AI assistants, developed by Rasa Technologies GmbH in Berlin. It provides NLU, dialogue management, and integration tools to deploy custom chatbots and voice assistants without relying on proprietary cloud AI services.",
+  "category": "framework",
+  "country": [
+    "Germany"
+  ],
+  "source": {
+    "platform": "GitHub",
+    "url_repository": "https://github.com/RasaHQ/rasa",
+    "license": "Apache-2.0",
+    "language": "Python",
+    "url_documentation": "https://rasa.com/docs/rasa"
+  },
+  "owner": {
+    "name": "Rasa Technologies GmbH",
+    "type": "organization",
+    "description": "German AI company building open-source conversational AI infrastructure, founded in Berlin.",
+    "url_website": "https://rasa.com",
+    "is_a_startup": false
+  },
+  "metadata": {
+    "filename": "rasa-fac796.json",
+    "filepath": "awesome/projects/rasa-fac796.json",
+    "created_at": "2026-08-26T18:01:14Z"
+  },
+  "tags": [
+    "conversational-ai",
+    "chatbot",
+    "nlp",
+    "dialogue",
+    "python",
+    "nlu"
+  ]
+}
