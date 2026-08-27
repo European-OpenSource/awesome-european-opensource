@@ -84,6 +84,10 @@ body:
         - Malta
         - Cyprus
         - United Kingdom
+        - Switzerland
+        - Norway
+        - Iceland
+        - Liechtenstein
     validations:
       required: true
 
