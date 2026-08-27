@@ -1,0 +1,36 @@
+{
+  "name": "Qubes OS",
+  "description": "Qubes OS is a security-focused desktop operating system based on Xen hypervisor isolation, developed by Invisible Things Lab in Warsaw. It compartmentalizes user activities into separate virtual machines to contain security breaches, offering hardware-enforced isolation as the primary security mechanism.",
+  "category": "os",
+  "country": [
+    "Poland"
+  ],
+  "source": {
+    "platform": "GitHub",
+    "url_repository": "https://github.com/QubesOS/qubes-core-admin",
+    "license": "LGPL-2.1",
+    "language": "Python",
+    "url_documentation": "https://www.qubes-os.org/doc"
+  },
+  "owner": {
+    "name": "Invisible Things Lab",
+    "type": "organization",
+    "description": "Polish security research and software company founded by Joanna Rutkowska in Warsaw.",
+    "url_website": "https://www.qubes-os.org",
+    "is_a_startup": false
+  },
+  "metadata": {
+    "filename": "qubes-os-f18242.json",
+    "filepath": "awesome/projects/qubes-os-f18242.json",
+    "created_at": "2026-08-26T17:57:20Z"
+  },
+  "tags": [
+    "security",
+    "os",
+    "linux",
+    "virtualization",
+    "privacy",
+    "xen",
+    "isolation"
+  ]
+}
