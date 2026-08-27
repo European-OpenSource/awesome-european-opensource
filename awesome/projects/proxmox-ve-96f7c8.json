@@ -1,0 +1,36 @@
+{
+  "name": "Proxmox VE",
+  "description": "Proxmox VE is an open-source server virtualization platform combining KVM hypervisor and LXC containers with a unified web-based management interface. Built by Proxmox Server Solutions GmbH in Vienna, it enables management of VMs, containers, storage, and networking across bare-metal clusters without vendor lock-in.",
+  "category": "app",
+  "country": [
+    "Austria"
+  ],
+  "source": {
+    "platform": "Other",
+    "url_repository": "https://git.proxmox.com/",
+    "license": "AGPL-3.0",
+    "language": "Perl",
+    "url_documentation": "https://pve.proxmox.com/wiki/Main_Page"
+  },
+  "owner": {
+    "name": "Proxmox Server Solutions GmbH",
+    "type": "organization",
+    "description": "Austrian company based in Vienna developing open-source virtualization software.",
+    "url_website": "https://www.proxmox.com",
+    "is_a_startup": false
+  },
+  "metadata": {
+    "filename": "proxmox-ve-96f7c8.json",
+    "filepath": "awesome/projects/proxmox-ve-96f7c8.json",
+    "created_at": "2026-08-26T18:03:11Z"
+  },
+  "tags": [
+    "virtualization",
+    "kvm",
+    "lxc",
+    "hypervisor",
+    "self-hosted",
+    "containers",
+    "datacenter"
+  ]
+}
