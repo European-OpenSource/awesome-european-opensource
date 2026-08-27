@@ -1,0 +1,33 @@
+{
+  "name": "Xinity Runtime",
+  "description": "Xinity Runtime is a self-hosted, open-source AI platform for on-premise LLM inference. It exposes an OpenAI-compatible API with multi-model orchestration and a management dashboard, letting regulated organizations run generative AI on their own hardware with zero data egress.",
+  "category": "framework",
+  "country": [
+    "Austria"
+  ],
+  "source": {
+    "platform": "GitHub",
+    "url_repository": "https://github.com/xinity-ai/xinity-ai",
+    "license": "Apache-2.0",
+    "language": "TypeScript"
+  },
+  "owner": {
+    "name": "Xinity",
+    "type": "organization",
+    "description": "Sovereign AI infrastructure for regulated industries. Xinity helps banks, hospitals, and law firms in the DACH region run on-premise, GDPR-compliant AI on hardware they control. Sovereign by architecture, not by contract. Based in Vienna.",
+    "url_website": "https://xinity.ai",
+    "is_a_startup": false
+  },
+  "metadata": {
+    "filename": "xinity-runtime-a2ddc1.json",
+    "filepath": "awesome/projects/xinity-runtime-a2ddc1.json",
+    "created_at": "2026-08-26T17:58:02Z"
+  },
+  "tags": [
+    "on-premise-ai",
+    "llm-inference",
+    "self-hosted",
+    "gdpr",
+    "sovereign-ai"
+  ]
+}
