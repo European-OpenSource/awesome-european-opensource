@@ -1,0 +1,32 @@
+{
+  "name": "Vship",
+  "description": "Vship is a GPU-accelerated library for computing perceptual video quality metrics, SSIMULACRA2, Butteraugli, and CVVDP, significantly faster than CPU-based tools. It supports Vulkan, CUDA, and HIP, and ships with FFVship, a CLI for encoder developers who want faster, more accurate quality tuning than PSNR, SSIM, or VMAF provide.",
+  "category": "library",
+  "country": [
+    "France"
+  ],
+  "source": {
+    "platform": "Codeberg",
+    "url_repository": "https://codeberg.org/Line-fr/Vship",
+    "license": "MIT",
+    "language": "C++",
+    "url_documentation": "https://codeberg.org/Line-fr/Vship/src/branch/main/doc/Home.md"
+  },
+  "owner": {
+    "name": "Line Fremery",
+    "type": "individual",
+    "is_a_startup": false
+  },
+  "metadata": {
+    "filename": "vship-cea868.json",
+    "filepath": "awesome/projects/vship-cea868.json",
+    "created_at": "2026-08-26T17:57:53Z"
+  },
+  "tags": [
+    "video-quality",
+    "gpu",
+    "vulkan",
+    "cuda",
+    "codec-tuning"
+  ]
+}
