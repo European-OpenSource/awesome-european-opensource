@@ -1,0 +1,28 @@
+{
+  "name": "Nomenklatura",
+  "description": "Framework for integrating FollowTheMoney entity data from multiple sources for EU AML compliance.",
+  "category": "framework",
+  "country": [
+    "Germany"
+  ],
+  "source": {
+    "platform": "GitHub",
+    "url_repository": "https://github.com/opensanctions/nomenklatura",
+    "license": "MIT",
+    "language": "Python"
+  },
+  "owner": {
+    "name": "opensanctions",
+    "type": "organization",
+    "url_website": "https://www.opensanctions.org",
+    "is_a_startup": false
+  },
+  "metadata": {
+    "filename": "nomenklatura-6692db.json",
+    "filepath": "awesome/projects/nomenklatura-6692db.json",
+    "created_at": "2026-08-31T19:47:38Z"
+  },
+  "tags": [
+    "sanctions"
+  ]
+}
