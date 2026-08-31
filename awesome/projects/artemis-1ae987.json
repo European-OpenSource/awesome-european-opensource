@@ -1,0 +1,29 @@
+{
+  "name": "Artemis",
+  "description": "Modular vulnerability scanner with automatic report generation developed by CERT Polska.",
+  "category": "cli",
+  "country": [
+    "Poland"
+  ],
+  "source": {
+    "platform": "GitHub",
+    "url_repository": "https://github.com/CERT-Polska/Artemis",
+    "license": "BSD-3-Clause",
+    "language": "Python",
+    "url_documentation": "https://cert.pl/en/posts/2024/01/artemis-security-scanner/"
+  },
+  "owner": {
+    "name": "CERT-Polska",
+    "type": "organization",
+    "url_website": "https://cert.pl/",
+    "is_a_startup": false
+  },
+  "metadata": {
+    "filename": "artemis-1ae987.json",
+    "filepath": "awesome/projects/artemis-1ae987.json",
+    "created_at": "2026-08-31T19:46:01Z"
+  },
+  "tags": [
+    "csirt"
+  ]
+}
