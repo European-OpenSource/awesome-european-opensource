@@ -1,0 +1,29 @@
+{
+  "name": "OpenSanctions",
+  "description": "Open database of international sanctions data, persons of interest and politically exposed persons, including EU sanctions lists.",
+  "category": "app",
+  "country": [
+    "Germany"
+  ],
+  "source": {
+    "platform": "GitHub",
+    "url_repository": "https://github.com/opensanctions/opensanctions",
+    "license": "MIT",
+    "language": "Python",
+    "url_documentation": "https://www.opensanctions.org"
+  },
+  "owner": {
+    "name": "opensanctions",
+    "type": "organization",
+    "url_website": "https://www.opensanctions.org",
+    "is_a_startup": false
+  },
+  "metadata": {
+    "filename": "opensanctions-af3183.json",
+    "filepath": "awesome/projects/opensanctions-af3183.json",
+    "created_at": "2026-08-31T19:46:05Z"
+  },
+  "tags": [
+    "amld"
+  ]
+}
