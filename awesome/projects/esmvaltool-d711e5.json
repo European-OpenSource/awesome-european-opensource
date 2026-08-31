@@ -1,0 +1,29 @@
+{
+  "name": "ESMValTool",
+  "description": "Community diagnostic and performance metrics tool for evaluating Earth system models in European climate research.",
+  "category": "app",
+  "country": [
+    "Germany"
+  ],
+  "source": {
+    "platform": "GitHub",
+    "url_repository": "https://github.com/ESMValGroup/ESMValTool",
+    "license": "Apache-2.0",
+    "language": "Python",
+    "url_documentation": "https://www.esmvaltool.org"
+  },
+  "owner": {
+    "name": "ESMValGroup",
+    "type": "organization",
+    "url_website": "https://www.esmvaltool.org",
+    "is_a_startup": false
+  },
+  "metadata": {
+    "filename": "esmvaltool-d711e5.json",
+    "filepath": "awesome/projects/esmvaltool-d711e5.json",
+    "created_at": "2026-08-31T19:46:56Z"
+  },
+  "tags": [
+    "climate"
+  ]
+}
