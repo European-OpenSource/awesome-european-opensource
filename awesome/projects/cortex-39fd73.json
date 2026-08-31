@@ -1,0 +1,29 @@
+{
+  "name": "Cortex",
+  "description": "Observable analysis and active response engine used by European CERTs for automated threat analysis.",
+  "category": "app",
+  "country": [
+    "France"
+  ],
+  "source": {
+    "platform": "GitHub",
+    "url_repository": "https://github.com/TheHive-Project/Cortex",
+    "license": "AGPL-3.0",
+    "language": "Scala",
+    "url_documentation": "https://strangebee.com/cortex/"
+  },
+  "owner": {
+    "name": "TheHive-Project",
+    "type": "organization",
+    "url_website": "https://thehive-project.org",
+    "is_a_startup": false
+  },
+  "metadata": {
+    "filename": "cortex-39fd73.json",
+    "filepath": "awesome/projects/cortex-39fd73.json",
+    "created_at": "2026-08-31T19:45:39Z"
+  },
+  "tags": [
+    "csirt"
+  ]
+}
