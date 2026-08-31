@@ -1,0 +1,29 @@
+{
+  "name": "schwifty",
+  "description": "Python library for IBAN and BIC parsing, validation and generation.",
+  "category": "library",
+  "country": [
+    "Germany"
+  ],
+  "source": {
+    "platform": "GitHub",
+    "url_repository": "https://github.com/mdomke/schwifty",
+    "license": "MIT",
+    "language": "Python",
+    "url_documentation": "https://schwifty.readthedocs.io"
+  },
+  "owner": {
+    "name": "mdomke",
+    "type": "individual",
+    "url_website": "http://martindomke.net",
+    "is_a_startup": false
+  },
+  "metadata": {
+    "filename": "schwifty-f3fe18.json",
+    "filepath": "awesome/projects/schwifty-f3fe18.json",
+    "created_at": "2026-08-31T19:47:08Z"
+  },
+  "tags": [
+    "iban"
+  ]
+}
