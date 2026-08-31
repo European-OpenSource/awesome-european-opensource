@@ -1,0 +1,27 @@
+{
+  "name": "MOTIS",
+  "description": "Multimodal travel information system providing routing, geocoding, and map tiles across European transit networks.",
+  "category": "app",
+  "country": [
+    "Germany"
+  ],
+  "source": {
+    "platform": "GitHub",
+    "url_repository": "https://github.com/motis-project/motis",
+    "license": "MIT",
+    "language": "C++"
+  },
+  "owner": {
+    "name": "motis-project",
+    "type": "organization",
+    "is_a_startup": false
+  },
+  "metadata": {
+    "filename": "motis-e086b3.json",
+    "filepath": "awesome/projects/motis-e086b3.json",
+    "created_at": "2026-08-31T19:46:15Z"
+  },
+  "tags": [
+    "its"
+  ]
+}
