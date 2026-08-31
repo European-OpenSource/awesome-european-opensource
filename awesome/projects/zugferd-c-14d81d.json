@@ -1,0 +1,28 @@
+{
+  "name": "ZUGFeRD C",
+  "description": "C library for creating and reading ZUGFeRD and Factur-X e-invoices.",
+  "category": "library",
+  "country": [
+    "Germany"
+  ],
+  "source": {
+    "platform": "GitHub",
+    "url_repository": "https://github.com/stephanstapel/ZUGFeRD-csharp",
+    "license": "Apache-2.0",
+    "language": "C#"
+  },
+  "owner": {
+    "name": "stephanstapel",
+    "type": "individual",
+    "url_website": "http://www.s2-industries.com",
+    "is_a_startup": false
+  },
+  "metadata": {
+    "filename": "zugferd-c-14d81d.json",
+    "filepath": "awesome/projects/zugferd-c-14d81d.json",
+    "created_at": "2026-08-31T19:46:27Z"
+  },
+  "tags": [
+    "en16931"
+  ]
+}
