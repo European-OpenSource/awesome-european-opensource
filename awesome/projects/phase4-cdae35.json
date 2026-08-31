@@ -1,0 +1,28 @@
+{
+  "name": "phase4",
+  "description": "AS4 client and server with built-in support for Peppol and CEF eDelivery.",
+  "category": "library",
+  "country": [
+    "Austria"
+  ],
+  "source": {
+    "platform": "GitHub",
+    "url_repository": "https://github.com/phax/phase4",
+    "license": "Apache-2.0",
+    "language": "Java"
+  },
+  "owner": {
+    "name": "phax",
+    "type": "individual",
+    "url_website": "https://paypal.me/PhilipHelger",
+    "is_a_startup": false
+  },
+  "metadata": {
+    "filename": "phase4-cdae35.json",
+    "filepath": "awesome/projects/phase4-cdae35.json",
+    "created_at": "2026-08-31T19:47:41Z"
+  },
+  "tags": [
+    "e-delivery"
+  ]
+}
