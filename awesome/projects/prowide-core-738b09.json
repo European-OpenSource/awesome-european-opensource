@@ -1,0 +1,30 @@
+{
+  "name": "Prowide Core",
+  "description": "Java framework for managing SWIFT messages used in European interbank communication.",
+  "category": "library",
+  "country": [
+    "Luxembourg"
+  ],
+  "source": {
+    "platform": "GitHub",
+    "url_repository": "https://github.com/prowide/prowide-core",
+    "license": "Apache-2.0",
+    "language": "Java",
+    "url_documentation": "https://www.prowidesoftware.com"
+  },
+  "owner": {
+    "name": "prowide",
+    "type": "organization",
+    "url_website": "http://www.prowidesoftware.com",
+    "is_a_startup": false
+  },
+  "metadata": {
+    "filename": "prowide-core-738b09.json",
+    "filepath": "awesome/projects/prowide-core-738b09.json",
+    "created_at": "2026-08-31T19:46:59Z"
+  },
+  "tags": [
+    "iso20022",
+    "psd2"
+  ]
+}
