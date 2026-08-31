@@ -1,0 +1,28 @@
+{
+  "name": "drafthorse",
+  "description": "Pure Python ZUGFeRD and Factur-X implementation for creating EN 16931 e-invoices.",
+  "category": "library",
+  "country": [
+    "Germany"
+  ],
+  "source": {
+    "platform": "GitHub",
+    "url_repository": "https://github.com/pretix/python-drafthorse",
+    "license": "Apache-2.0",
+    "language": "Python"
+  },
+  "owner": {
+    "name": "pretix",
+    "type": "organization",
+    "url_website": "https://pretix.eu",
+    "is_a_startup": false
+  },
+  "metadata": {
+    "filename": "drafthorse-d59235.json",
+    "filepath": "awesome/projects/drafthorse-d59235.json",
+    "created_at": "2026-08-31T19:48:06Z"
+  },
+  "tags": [
+    "en16931"
+  ]
+}
