@@ -1,0 +1,28 @@
+{
+  "name": "valvat",
+  "description": "Ruby library for validating European VAT numbers with VIES lookup.",
+  "category": "library",
+  "country": [
+    "Germany"
+  ],
+  "source": {
+    "platform": "GitHub",
+    "url_repository": "https://github.com/yolk/valvat",
+    "license": "MIT",
+    "language": "Ruby"
+  },
+  "owner": {
+    "name": "yolk",
+    "type": "individual",
+    "url_website": "https://mite.de/",
+    "is_a_startup": false
+  },
+  "metadata": {
+    "filename": "valvat-68180d.json",
+    "filepath": "awesome/projects/valvat-68180d.json",
+    "created_at": "2026-08-31T19:46:58Z"
+  },
+  "tags": [
+    "vat"
+  ]
+}
