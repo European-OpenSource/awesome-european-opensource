@@ -1,0 +1,28 @@
+{
+  "name": "Froide",
+  "description": "Freedom of Information portal framework deployed across European countries for government transparency requests.",
+  "category": "app",
+  "country": [
+    "Germany"
+  ],
+  "source": {
+    "platform": "GitHub",
+    "url_repository": "https://github.com/okfde/froide",
+    "license": "MIT",
+    "language": "Python"
+  },
+  "owner": {
+    "name": "okfde",
+    "type": "organization",
+    "url_website": "https://okfn.de",
+    "is_a_startup": false
+  },
+  "metadata": {
+    "filename": "froide-bf022b.json",
+    "filepath": "awesome/projects/froide-bf022b.json",
+    "created_at": "2026-08-31T19:46:40Z"
+  },
+  "tags": [
+    "foi"
+  ]
+}
