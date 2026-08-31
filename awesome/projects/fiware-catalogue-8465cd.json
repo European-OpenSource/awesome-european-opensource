@@ -1,0 +1,29 @@
+{
+  "name": "FIWARE Catalogue",
+  "description": "Curated framework of open source platform components for EU smart applications using NGSI-LD.",
+  "category": "awesome-list",
+  "country": [
+    "Germany"
+  ],
+  "source": {
+    "platform": "GitHub",
+    "url_repository": "https://github.com/FIWARE/catalogue",
+    "license": "AGPL-3.0",
+    "language": "Other",
+    "url_documentation": "https://www.fiware.org/developers/catalogue/"
+  },
+  "owner": {
+    "name": "FIWARE",
+    "type": "organization",
+    "url_website": "https://developer.fiware.org",
+    "is_a_startup": false
+  },
+  "metadata": {
+    "filename": "fiware-catalogue-8465cd.json",
+    "filepath": "awesome/projects/fiware-catalogue-8465cd.json",
+    "created_at": "2026-08-31T19:48:02Z"
+  },
+  "tags": [
+    "fiware"
+  ]
+}
