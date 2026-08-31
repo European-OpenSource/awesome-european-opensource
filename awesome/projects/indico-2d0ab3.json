@@ -1,0 +1,29 @@
+{
+  "name": "Indico",
+  "description": "Feature-rich event management system developed at CERN for scientific conferences and workshops.",
+  "category": "app",
+  "country": [
+    "Switzerland"
+  ],
+  "source": {
+    "platform": "GitHub",
+    "url_repository": "https://github.com/indico/indico",
+    "license": "MIT",
+    "language": "Python",
+    "url_documentation": "https://getindico.io"
+  },
+  "owner": {
+    "name": "indico",
+    "type": "organization",
+    "url_website": "https://getindico.io/",
+    "is_a_startup": false
+  },
+  "metadata": {
+    "filename": "indico-2d0ab3.json",
+    "filepath": "awesome/projects/indico-2d0ab3.json",
+    "created_at": "2026-08-31T19:45:40Z"
+  },
+  "tags": [
+    "cern"
+  ]
+}
