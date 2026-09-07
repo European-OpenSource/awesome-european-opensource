@@ -139,6 +139,7 @@ body:
         - BSD-3-Clause-LBNL
         - BSD-2-Clause-Patent
         - Creative Commons
+        - CC0-1.0
         - CERN Open Hardware Licence Version 2 - Permissive
         - CERN Open Hardware Licence Version 2 - Weakly Reciprocal
         - CERN Open Hardware Licence Version 2 - Strongly Reciprocal
@@ -160,6 +161,7 @@ body:
         - EFL-2.0
         - Entessa
         - EUDatagrid
+        - EUPL-1.1
         - EUPL-1.2
         - FairSource
         - Frameworx-1.0
