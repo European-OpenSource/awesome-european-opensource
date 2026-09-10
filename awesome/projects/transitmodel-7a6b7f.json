@@ -1,0 +1,25 @@
+{
+  "name": "transit_model",
+  "description": "Rust library for managing transit data with NeTEx and GTFS support.",
+  "category": "library",
+  "country": [
+    "France"
+  ],
+  "source": {
+    "platform": "GitHub",
+    "url_repository": "https://github.com/hove-io/transit_model",
+    "license": "AGPL-3.0",
+    "language": "Rust"
+  },
+  "owner": {
+    "name": "hove-io",
+    "type": "organization",
+    "url_website": "https://www.hove.com",
+    "is_a_startup": false
+  },
+  "metadata": {
+    "filename": "transitmodel-7a6b7f.json",
+    "filepath": "awesome/projects/transitmodel-7a6b7f.json",
+    "created_at": "2026-09-10T09:27:06Z"
+  }
+}
