@@ -1,0 +1,24 @@
+{
+  "name": "ERC Starting Grant Template",
+  "description": "LaTeX class and template for European Research Council Starting Grant proposals.",
+  "category": "learning",
+  "country": [
+    "Romania"
+  ],
+  "source": {
+    "platform": "GitHub",
+    "url_repository": "https://github.com/alexfikl/erc-stg",
+    "license": "CC0-1.0",
+    "language": "TeX"
+  },
+  "owner": {
+    "name": "alexfikl",
+    "type": "individual",
+    "is_a_startup": false
+  },
+  "metadata": {
+    "filename": "erc-starting-grant-template-f87c37.json",
+    "filepath": "awesome/projects/erc-starting-grant-template-f87c37.json",
+    "created_at": "2026-09-10T15:22:58Z"
+  }
+}
