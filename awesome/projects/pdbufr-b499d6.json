@@ -1,0 +1,25 @@
+{
+  "name": "pdbufr",
+  "description": "High-level BUFR interface for the ECMWF ecCodes library with Pandas DataFrame support.",
+  "category": "library",
+  "country": [
+    "United Kingdom"
+  ],
+  "source": {
+    "platform": "GitHub",
+    "url_repository": "https://github.com/ecmwf/pdbufr",
+    "license": "Apache-2.0",
+    "language": "Python"
+  },
+  "owner": {
+    "name": "ecmwf",
+    "type": "organization",
+    "url_website": "https://www.ecmwf.int",
+    "is_a_startup": false
+  },
+  "metadata": {
+    "filename": "pdbufr-b499d6.json",
+    "filepath": "awesome/projects/pdbufr-b499d6.json",
+    "created_at": "2026-09-10T09:53:02Z"
+  }
+}
