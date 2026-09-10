@@ -1,0 +1,25 @@
+{
+  "name": "eurlex Python",
+  "description": "Python parser for extracting and processing EUR-Lex legislative documents.",
+  "category": "library",
+  "country": [
+    "Netherlands"
+  ],
+  "source": {
+    "platform": "GitHub",
+    "url_repository": "https://github.com/kevin91nl/eurlex",
+    "license": "MIT",
+    "language": "Python"
+  },
+  "owner": {
+    "name": "kevin91nl",
+    "type": "individual",
+    "url_website": "https://www.data-blogger.com/",
+    "is_a_startup": false
+  },
+  "metadata": {
+    "filename": "eurlex-python-15c2f8.json",
+    "filepath": "awesome/projects/eurlex-python-15c2f8.json",
+    "created_at": "2026-09-10T09:51:18Z"
+  }
+}
