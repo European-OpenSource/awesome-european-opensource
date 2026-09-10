@@ -1,0 +1,25 @@
+{
+  "name": "NeTEx Java Model",
+  "description": "Java JAXB binding classes for the NeTEx XSD schema.",
+  "category": "library",
+  "country": [
+    "Norway"
+  ],
+  "source": {
+    "platform": "GitHub",
+    "url_repository": "https://github.com/entur/netex-java-model",
+    "license": "EUPL-1.2",
+    "language": "Java"
+  },
+  "owner": {
+    "name": "entur",
+    "type": "organization",
+    "url_website": "https://entur.no/",
+    "is_a_startup": false
+  },
+  "metadata": {
+    "filename": "netex-java-model-88fcd3.json",
+    "filepath": "awesome/projects/netex-java-model-88fcd3.json",
+    "created_at": "2026-09-10T09:56:03Z"
+  }
+}
