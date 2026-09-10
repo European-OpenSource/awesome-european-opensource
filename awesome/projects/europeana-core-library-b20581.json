@@ -1,0 +1,25 @@
+{
+  "name": "Europeana Core Library",
+  "description": "Core library containing EDM (Europeana Data Model) used by Europeana applications.",
+  "category": "library",
+  "country": [
+    "Netherlands"
+  ],
+  "source": {
+    "platform": "GitHub",
+    "url_repository": "https://github.com/europeana/corelib",
+    "license": "EUPL-1.2",
+    "language": "Java"
+  },
+  "owner": {
+    "name": "europeana",
+    "type": "organization",
+    "url_website": "https://www.europeana.eu/",
+    "is_a_startup": false
+  },
+  "metadata": {
+    "filename": "europeana-core-library-b20581.json",
+    "filepath": "awesome/projects/europeana-core-library-b20581.json",
+    "created_at": "2026-09-10T09:39:16Z"
+  }
+}
