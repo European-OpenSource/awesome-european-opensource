@@ -1,0 +1,24 @@
+{
+  "name": "SimplA11yMonit",
+  "description": "Tool implementing the EU simplified accessibility monitoring method from Commission Decision 2018/1524.",
+  "category": "app",
+  "country": [
+    "Luxembourg"
+  ],
+  "source": {
+    "platform": "GitHub",
+    "url_repository": "https://github.com/accessibility-luxembourg/simplA11yMonit",
+    "license": "MIT",
+    "language": "JavaScript"
+  },
+  "owner": {
+    "name": "accessibility-luxembourg",
+    "type": "organization",
+    "is_a_startup": false
+  },
+  "metadata": {
+    "filename": "simpla11ymonit-63baae.json",
+    "filepath": "awesome/projects/simpla11ymonit-63baae.json",
+    "created_at": "2026-09-10T10:05:35Z"
+  }
+}
