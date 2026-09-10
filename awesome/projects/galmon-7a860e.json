@@ -1,0 +1,28 @@
+{
+  "name": "galmon",
+  "description": "Open source monitoring system for the Galileo satellite navigation constellation.",
+  "category": "cli",
+  "country": [
+    "Netherlands"
+  ],
+  "source": {
+    "platform": "GitHub",
+    "url_repository": "https://github.com/berthubert/galmon",
+    "license": "GPL-3.0",
+    "language": "C++"
+  },
+  "owner": {
+    "name": "berthubert",
+    "type": "individual",
+    "url_website": "https://berthub.eu/",
+    "is_a_startup": false
+  },
+  "metadata": {
+    "filename": "galmon-7a860e.json",
+    "filepath": "awesome/projects/galmon-7a860e.json",
+    "created_at": "2026-08-31T19:47:40Z"
+  },
+  "tags": [
+    "galileo"
+  ]
+}
