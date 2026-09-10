@@ -1,0 +1,25 @@
+{
+  "name": "SiGa",
+  "description": "Signature Gateway for creating and validating eIDAS-compliant digital signature containers.",
+  "category": "app",
+  "country": [
+    "Estonia"
+  ],
+  "source": {
+    "platform": "GitHub",
+    "url_repository": "https://github.com/open-eid/SiGa",
+    "license": "EUPL-1.2",
+    "language": "Java"
+  },
+  "owner": {
+    "name": "open-eid",
+    "type": "organization",
+    "url_website": "https://www.ria.ee/en/state-information-system/electronic-identity-eid.html",
+    "is_a_startup": false
+  },
+  "metadata": {
+    "filename": "siga-f0eb38.json",
+    "filepath": "awesome/projects/siga-f0eb38.json",
+    "created_at": "2026-09-10T09:53:53Z"
+  }
+}
