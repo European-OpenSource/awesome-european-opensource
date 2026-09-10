@@ -1,0 +1,25 @@
+{
+  "name": "e-invoicing PHP",
+  "description": "PHP library to generate and read EN 16931 structured XML with UBL and CII syntaxes.",
+  "category": "library",
+  "country": [
+    "Germany"
+  ],
+  "source": {
+    "platform": "GitHub",
+    "url_repository": "https://github.com/easybill/e-invoicing",
+    "license": "MIT",
+    "language": "Other"
+  },
+  "owner": {
+    "name": "easybill",
+    "type": "organization",
+    "url_website": "https://www.easybill.de",
+    "is_a_startup": false
+  },
+  "metadata": {
+    "filename": "e-invoicing-php-88692c.json",
+    "filepath": "awesome/projects/e-invoicing-php-88692c.json",
+    "created_at": "2026-09-10T10:04:44Z"
+  }
+}
