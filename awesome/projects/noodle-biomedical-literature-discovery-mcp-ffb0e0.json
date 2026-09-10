@@ -1,0 +1,39 @@
+{
+  "name": "Noodle Biomedical Literature Discovery MCP",
+  "description": "Open-source public MCP adapter for Noodle by Helena Bioinformatics. It lets agents search a public PubMed-derived biomedical corpus, retrieve source-linked records, and traverse bounded citation and semantic literature neighborhoods. The hosted server is read-only, requires no account or API key, accepts no patient or private data, and does not provide diagnosis, treatment, or causal conclusions.",
+  "category": "api",
+  "country": [
+    "Bulgaria"
+  ],
+  "source": {
+    "platform": "GitHub",
+    "url_repository": "https://github.com/helena-bioinformatics/noodle-mcp",
+    "license": "Apache-2.0",
+    "language": "Python",
+    "url_documentation": "https://noodle.helena.bio/mcp"
+  },
+  "owner": {
+    "name": "Helena Bioinformatics",
+    "type": "organization",
+    "description": "Bulgarian bioinformatics company building free, source-linked scientific infrastructure for researchers and qualified professionals.",
+    "url_website": "https://www.helena.bio",
+    "is_a_startup": false
+  },
+  "metadata": {
+    "filename": "noodle-biomedical-literature-discovery-mcp-ffb0e0.json",
+    "filepath": "awesome/projects/noodle-biomedical-literature-discovery-mcp-ffb0e0.json",
+    "created_at": "2026-09-10T09:13:10Z"
+  },
+  "tags": [
+    "mcp",
+    "bioinformatics",
+    "biomedical-literature",
+    "pubmed",
+    "citation-graph",
+    "semantic-search",
+    "python",
+    "ai",
+    "research",
+    "open-science"
+  ]
+}
