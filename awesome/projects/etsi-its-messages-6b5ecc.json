@@ -1,0 +1,25 @@
+{
+  "name": "ETSI ITS Messages",
+  "description": "ROS 2 support for ETSI ITS messages enabling V2X communication.",
+  "category": "library",
+  "country": [
+    "Germany"
+  ],
+  "source": {
+    "platform": "GitHub",
+    "url_repository": "https://github.com/ika-rwth-aachen/etsi_its_messages",
+    "license": "MIT",
+    "language": "C"
+  },
+  "owner": {
+    "name": "ika-rwth-aachen",
+    "type": "organization",
+    "url_website": "https://www.ika.rwth-aachen.de",
+    "is_a_startup": false
+  },
+  "metadata": {
+    "filename": "etsi-its-messages-6b5ecc.json",
+    "filepath": "awesome/projects/etsi-its-messages-6b5ecc.json",
+    "created_at": "2026-09-10T09:26:02Z"
+  }
+}
