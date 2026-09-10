@@ -1,0 +1,29 @@
+{
+  "name": "traffic",
+  "description": "Python toolbox for processing and analysing air traffic data from Eurocontrol and OpenSky.",
+  "category": "library",
+  "country": [
+    "France"
+  ],
+  "source": {
+    "platform": "GitHub",
+    "url_repository": "https://github.com/xoolive/traffic",
+    "license": "MIT",
+    "language": "Python",
+    "url_documentation": "https://traffic-viz.github.io/"
+  },
+  "owner": {
+    "name": "xoolive",
+    "type": "individual",
+    "url_website": "http://www.xoolive.org/",
+    "is_a_startup": false
+  },
+  "metadata": {
+    "filename": "traffic-ea74a3.json",
+    "filepath": "awesome/projects/traffic-ea74a3.json",
+    "created_at": "2026-08-31T19:46:28Z"
+  },
+  "tags": [
+    "its"
+  ]
+}
