@@ -1,0 +1,26 @@
+{
+  "name": "Europa Component Library",
+  "description": "Component library used by the European Commission websites.",
+  "category": "library",
+  "country": [
+    "Belgium"
+  ],
+  "source": {
+    "platform": "GitHub",
+    "url_repository": "https://github.com/ec-europa/europa-component-library",
+    "license": "EUPL-1.1",
+    "language": "JavaScript",
+    "url_documentation": "https://ec.europa.eu/component-library"
+  },
+  "owner": {
+    "name": "ec-europa",
+    "type": "organization",
+    "url_website": "http://europa.eu/",
+    "is_a_startup": false
+  },
+  "metadata": {
+    "filename": "europa-component-library-4b1d3d.json",
+    "filepath": "awesome/projects/europa-component-library-4b1d3d.json",
+    "created_at": "2026-09-10T15:22:30Z"
+  }
+}
