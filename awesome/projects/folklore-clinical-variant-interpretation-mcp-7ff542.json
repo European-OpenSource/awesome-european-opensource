@@ -1,0 +1,39 @@
+{
+  "name": "Folklore Clinical Variant Interpretation MCP",
+  "description": "Open-source public MCP adapter for Folklore by Helena Bioinformatics. It helps agents classify supported GRCh38 germline variants under ACMG/AMP using structured public evidence, provenance and linked literature. The hosted server is read-only, requires no account or API key, accepts no patient or private case data, and is not a diagnosis or treatment recommendation.",
+  "category": "api",
+  "country": [
+    "Bulgaria"
+  ],
+  "source": {
+    "platform": "GitHub",
+    "url_repository": "https://github.com/helena-bioinformatics/folklore-mcp",
+    "license": "Apache-2.0",
+    "language": "Python",
+    "url_documentation": "https://folklore.helena.bio/docs/folklore-connector"
+  },
+  "owner": {
+    "name": "Helena Bioinformatics",
+    "type": "organization",
+    "description": "Bulgarian bioinformatics company building free, source-linked scientific infrastructure for researchers and qualified professionals.",
+    "url_website": "https://www.helena.bio",
+    "is_a_startup": false
+  },
+  "metadata": {
+    "filename": "folklore-clinical-variant-interpretation-mcp-7ff542.json",
+    "filepath": "awesome/projects/folklore-clinical-variant-interpretation-mcp-7ff542.json",
+    "created_at": "2026-09-10T09:12:48Z"
+  },
+  "tags": [
+    "mcp",
+    "bioinformatics",
+    "genomics",
+    "clinical-genetics",
+    "acmg",
+    "variant-interpretation",
+    "python",
+    "ai",
+    "research",
+    "healthcare"
+  ]
+}
