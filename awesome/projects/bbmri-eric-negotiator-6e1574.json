@@ -1,0 +1,26 @@
+{
+  "name": "BBMRI-ERIC Negotiator",
+  "description": "Open source access negotiation system for European biobank research infrastructures.",
+  "category": "app",
+  "country": [
+    "Austria"
+  ],
+  "source": {
+    "platform": "GitHub",
+    "url_repository": "https://github.com/BBMRI-ERIC/negotiator",
+    "license": "AGPL-3.0",
+    "language": "Java",
+    "url_documentation": "https://bbmri-eric.github.io/negotiator"
+  },
+  "owner": {
+    "name": "BBMRI-ERIC",
+    "type": "organization",
+    "url_website": "http://www.bbmri-eric.eu",
+    "is_a_startup": false
+  },
+  "metadata": {
+    "filename": "bbmri-eric-negotiator-6e1574.json",
+    "filepath": "awesome/projects/bbmri-eric-negotiator-6e1574.json",
+    "created_at": "2026-09-10T09:50:52Z"
+  }
+}
