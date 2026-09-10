@@ -1,0 +1,29 @@
+{
+  "name": "earthkit",
+  "description": "ECMWF Python tools for working with European weather and climate data.",
+  "category": "library",
+  "country": [
+    "United Kingdom"
+  ],
+  "source": {
+    "platform": "GitHub",
+    "url_repository": "https://github.com/ecmwf/earthkit",
+    "license": "Apache-2.0",
+    "language": "Python",
+    "url_documentation": "https://earthkit.ecmwf.int"
+  },
+  "owner": {
+    "name": "ecmwf",
+    "type": "organization",
+    "url_website": "https://www.ecmwf.int",
+    "is_a_startup": false
+  },
+  "metadata": {
+    "filename": "earthkit-c16ceb.json",
+    "filepath": "awesome/projects/earthkit-c16ceb.json",
+    "created_at": "2026-08-31T19:47:58Z"
+  },
+  "tags": [
+    "ecmwf"
+  ]
+}
