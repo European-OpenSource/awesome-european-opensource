@@ -1,0 +1,28 @@
+{
+  "name": "OpenSky API",
+  "description": "Python and Java bindings for the OpenSky Network REST API for European air traffic data.",
+  "category": "library",
+  "country": [
+    "Switzerland"
+  ],
+  "source": {
+    "platform": "GitHub",
+    "url_repository": "https://github.com/openskynetwork/opensky-api",
+    "license": "GPL-3.0",
+    "language": "Python"
+  },
+  "owner": {
+    "name": "openskynetwork",
+    "type": "organization",
+    "url_website": "http://opensky-network.org",
+    "is_a_startup": false
+  },
+  "metadata": {
+    "filename": "opensky-api-012d87.json",
+    "filepath": "awesome/projects/opensky-api-012d87.json",
+    "created_at": "2026-08-31T19:46:20Z"
+  },
+  "tags": [
+    "its"
+  ]
+}
