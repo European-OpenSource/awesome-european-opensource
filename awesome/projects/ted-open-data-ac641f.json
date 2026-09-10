@@ -1,0 +1,26 @@
+{
+  "name": "TED Open Data",
+  "description": "SPARQL query editor for the Tenders Electronic Daily Open Data Service.",
+  "category": "app",
+  "country": [
+    "Luxembourg"
+  ],
+  "source": {
+    "platform": "GitHub",
+    "url_repository": "https://github.com/OP-TED/ted-open-data",
+    "license": "EUPL-1.2",
+    "language": "JavaScript",
+    "url_documentation": "https://data.ted.europa.eu"
+  },
+  "owner": {
+    "name": "OP-TED",
+    "type": "organization",
+    "url_website": "https://ted.europa.eu",
+    "is_a_startup": false
+  },
+  "metadata": {
+    "filename": "ted-open-data-ac641f.json",
+    "filepath": "awesome/projects/ted-open-data-ac641f.json",
+    "created_at": "2026-09-10T10:06:00Z"
+  }
+}
