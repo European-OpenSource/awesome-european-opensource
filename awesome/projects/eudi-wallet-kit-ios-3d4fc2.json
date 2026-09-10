@@ -1,0 +1,26 @@
+{
+  "name": "EUDI Wallet Kit iOS",
+  "description": "Core wallet kit library for the EUDI Wallet reference implementation on iOS.",
+  "category": "library",
+  "country": [
+    "Belgium"
+  ],
+  "source": {
+    "platform": "GitHub",
+    "url_repository": "https://github.com/eu-digital-identity-wallet/eudi-lib-ios-wallet-kit",
+    "license": "Apache-2.0",
+    "language": "Swift",
+    "url_documentation": "https://eu-digital-identity-wallet.github.io/eudi-lib-ios-wallet-kit/documentation/eudiwalletkit/"
+  },
+  "owner": {
+    "name": "eu-digital-identity-wallet",
+    "type": "organization",
+    "url_website": "https://ec.europa.eu/digital-building-blocks/sites/display/EUDIGITALIDENTITYWALLET/EU+Digital+Identity+Wallet+Home",
+    "is_a_startup": false
+  },
+  "metadata": {
+    "filename": "eudi-wallet-kit-ios-3d4fc2.json",
+    "filepath": "awesome/projects/eudi-wallet-kit-ios-3d4fc2.json",
+    "created_at": "2026-09-10T09:36:36Z"
+  }
+}
