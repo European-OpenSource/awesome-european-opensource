@@ -1,0 +1,25 @@
+{
+  "name": "Harmony eDelivery Access Point",
+  "description": "Open source eDelivery AS4 Access Point for cross-border document exchange.",
+  "category": "app",
+  "country": [
+    "Estonia"
+  ],
+  "source": {
+    "platform": "GitHub",
+    "url_repository": "https://github.com/nordic-institute/harmony-access-point",
+    "license": "EUPL-1.2",
+    "language": "Java"
+  },
+  "owner": {
+    "name": "nordic-institute",
+    "type": "organization",
+    "url_website": "https://www.niis.org/",
+    "is_a_startup": false
+  },
+  "metadata": {
+    "filename": "harmony-edelivery-access-point-139c30.json",
+    "filepath": "awesome/projects/harmony-edelivery-access-point-139c30.json",
+    "created_at": "2026-09-10T10:07:52Z"
+  }
+}
