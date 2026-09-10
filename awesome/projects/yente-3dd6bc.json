@@ -1,0 +1,29 @@
+{
+  "name": "Yente",
+  "description": "Entity matching and search API for OpenSanctions data, supporting EU sanctions screening and KYC workflows.",
+  "category": "api",
+  "country": [
+    "Germany"
+  ],
+  "source": {
+    "platform": "GitHub",
+    "url_repository": "https://github.com/opensanctions/yente",
+    "license": "MIT",
+    "language": "Python",
+    "url_documentation": "https://yente.followthemoney.tech/"
+  },
+  "owner": {
+    "name": "opensanctions",
+    "type": "organization",
+    "url_website": "https://www.opensanctions.org",
+    "is_a_startup": false
+  },
+  "metadata": {
+    "filename": "yente-3dd6bc.json",
+    "filepath": "awesome/projects/yente-3dd6bc.json",
+    "created_at": "2026-08-31T19:48:26Z"
+  },
+  "tags": [
+    "sanctions"
+  ]
+}
