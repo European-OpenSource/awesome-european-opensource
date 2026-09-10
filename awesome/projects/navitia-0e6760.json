@@ -1,0 +1,29 @@
+{
+  "name": "Navitia",
+  "description": "Open source multimodal journey planning engine powering European public transport services.",
+  "category": "api",
+  "country": [
+    "France"
+  ],
+  "source": {
+    "platform": "GitHub",
+    "url_repository": "https://github.com/hove-io/navitia",
+    "license": "AGPL-3.0",
+    "language": "Python",
+    "url_documentation": "https://doc.navitia.io/"
+  },
+  "owner": {
+    "name": "hove-io",
+    "type": "organization",
+    "url_website": "https://www.hove.com",
+    "is_a_startup": false
+  },
+  "metadata": {
+    "filename": "navitia-0e6760.json",
+    "filepath": "awesome/projects/navitia-0e6760.json",
+    "created_at": "2026-08-31T19:46:24Z"
+  },
+  "tags": [
+    "its"
+  ]
+}
