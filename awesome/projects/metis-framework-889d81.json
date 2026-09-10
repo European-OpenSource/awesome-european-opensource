@@ -1,0 +1,25 @@
+{
+  "name": "Metis Framework",
+  "description": "Data publication framework for ingesting and processing European cultural heritage metadata.",
+  "category": "framework",
+  "country": [
+    "Netherlands"
+  ],
+  "source": {
+    "platform": "GitHub",
+    "url_repository": "https://github.com/europeana/metis-framework",
+    "license": "EUPL-1.2",
+    "language": "Java"
+  },
+  "owner": {
+    "name": "europeana",
+    "type": "organization",
+    "url_website": "https://www.europeana.eu/",
+    "is_a_startup": false
+  },
+  "metadata": {
+    "filename": "metis-framework-889d81.json",
+    "filepath": "awesome/projects/metis-framework-889d81.json",
+    "created_at": "2026-09-10T09:54:44Z"
+  }
+}
