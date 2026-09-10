@@ -1,0 +1,25 @@
+{
+  "name": "DSA Transparency Database",
+  "description": "Official Digital Services Act Transparency Database for content moderation reporting.",
+  "category": "app",
+  "country": [
+    "Belgium"
+  ],
+  "source": {
+    "platform": "GitHub",
+    "url_repository": "https://github.com/digital-services-act/transparency-database",
+    "license": "GPL-2.0",
+    "language": "PHP"
+  },
+  "owner": {
+    "name": "digital-services-act",
+    "type": "organization",
+    "url_website": "https://commission.europa.eu/strategy-and-policy/priorities-2019-2024/europe-fit-digital-age/digital-services-act-ensuring-safe-and-accountable-online-environment_en",
+    "is_a_startup": false
+  },
+  "metadata": {
+    "filename": "dsa-transparency-database-fdcd59.json",
+    "filepath": "awesome/projects/dsa-transparency-database-fdcd59.json",
+    "created_at": "2026-09-10T09:38:50Z"
+  }
+}
