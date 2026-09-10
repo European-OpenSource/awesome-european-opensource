@@ -1,0 +1,25 @@
+{
+  "name": "GeoDCAT-AP",
+  "description": "Reference XSLT implementation for converting ISO 19139 metadata to GeoDCAT-AP for EU data portals.",
+  "category": "scripts",
+  "country": [
+    "Belgium"
+  ],
+  "source": {
+    "platform": "GitHub",
+    "url_repository": "https://github.com/SEMICeu/iso-19139-to-dcat-ap",
+    "license": "EUPL-1.2",
+    "language": "Other"
+  },
+  "owner": {
+    "name": "SEMICeu",
+    "type": "organization",
+    "url_website": "https://interoperable-europe.ec.europa.eu/collection/semic-support-centre",
+    "is_a_startup": false
+  },
+  "metadata": {
+    "filename": "geodcat-ap-41594b.json",
+    "filepath": "awesome/projects/geodcat-ap-41594b.json",
+    "created_at": "2026-09-10T09:55:36Z"
+  }
+}
