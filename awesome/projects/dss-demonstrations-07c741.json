@@ -1,0 +1,28 @@
+{
+  "name": "DSS Demonstrations",
+  "description": "Sample applications demonstrating the integration of the EU Digital Signature Service library.",
+  "category": "library",
+  "country": [
+    "Luxembourg"
+  ],
+  "source": {
+    "platform": "GitHub",
+    "url_repository": "https://github.com/esig/dss-demonstrations",
+    "license": "LGPL-2.1",
+    "language": "Java"
+  },
+  "owner": {
+    "name": "esig",
+    "type": "organization",
+    "url_website": "https://ec.europa.eu/digital-building-blocks/wikis/display/DIGITAL/eSignature",
+    "is_a_startup": false
+  },
+  "metadata": {
+    "filename": "dss-demonstrations-07c741.json",
+    "filepath": "awesome/projects/dss-demonstrations-07c741.json",
+    "created_at": "2026-08-31T19:48:20Z"
+  },
+  "tags": [
+    "esignature"
+  ]
+}
