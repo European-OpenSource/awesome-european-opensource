@@ -1,0 +1,24 @@
+{
+  "name": "JDemetra",
+  "description": "Seasonal adjustment toolkit officially recommended by Eurostat for European statistical offices.",
+  "category": "app",
+  "country": [
+    "Belgium"
+  ],
+  "source": {
+    "platform": "GitHub",
+    "url_repository": "https://github.com/jdemetra/jdplus-main",
+    "license": "EUPL-1.2",
+    "language": "Java"
+  },
+  "owner": {
+    "name": "jdemetra",
+    "type": "organization",
+    "is_a_startup": false
+  },
+  "metadata": {
+    "filename": "jdemetra-f615e7.json",
+    "filepath": "awesome/projects/jdemetra-f615e7.json",
+    "created_at": "2026-09-10T09:56:32Z"
+  }
+}
