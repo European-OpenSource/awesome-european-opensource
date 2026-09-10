@@ -1,0 +1,28 @@
+{
+  "name": "Pandora",
+  "description": "File analysis framework for discovering suspicious content, developed by CIRCL Luxembourg.",
+  "category": "app",
+  "country": [
+    "Luxembourg"
+  ],
+  "source": {
+    "platform": "GitHub",
+    "url_repository": "https://github.com/pandora-analysis/pandora",
+    "license": "AGPL-3.0",
+    "language": "Python",
+    "url_documentation": "https://pandora.circl.lu/"
+  },
+  "owner": {
+    "name": "pandora-analysis",
+    "type": "organization",
+    "is_a_startup": false
+  },
+  "metadata": {
+    "filename": "pandora-9593dc.json",
+    "filepath": "awesome/projects/pandora-9593dc.json",
+    "created_at": "2026-08-31T19:47:18Z"
+  },
+  "tags": [
+    "cybersecurity"
+  ]
+}
