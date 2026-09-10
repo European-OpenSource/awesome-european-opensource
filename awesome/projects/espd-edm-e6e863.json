@@ -1,0 +1,26 @@
+{
+  "name": "ESPD-EDM",
+  "description": "European Single Procurement Document Exchange Data Model for integration with national ESPD service providers.",
+  "category": "other",
+  "country": [
+    "Luxembourg"
+  ],
+  "source": {
+    "platform": "GitHub",
+    "url_repository": "https://github.com/OP-TED/ESPD-EDM",
+    "license": "EUPL-1.2",
+    "language": "Other",
+    "url_documentation": "http://docs.ted.europa.eu/ESPD-EDM/"
+  },
+  "owner": {
+    "name": "OP-TED",
+    "type": "organization",
+    "url_website": "https://ted.europa.eu",
+    "is_a_startup": false
+  },
+  "metadata": {
+    "filename": "espd-edm-e6e863.json",
+    "filepath": "awesome/projects/espd-edm-e6e863.json",
+    "created_at": "2026-09-10T09:24:47Z"
+  }
+}
