@@ -1,0 +1,25 @@
+{
+  "name": "entsoe-py",
+  "description": "Python client for the ENTSO-E API (European Network of Transmission System Operators for Electricity).",
+  "category": "library",
+  "country": [
+    "Belgium"
+  ],
+  "source": {
+    "platform": "GitHub",
+    "url_repository": "https://github.com/EnergieID/entsoe-py",
+    "license": "MIT",
+    "language": "Python"
+  },
+  "owner": {
+    "name": "EnergieID",
+    "type": "organization",
+    "url_website": "http://www.energieid.be",
+    "is_a_startup": false
+  },
+  "metadata": {
+    "filename": "entsoe-py-8d79bc.json",
+    "filepath": "awesome/projects/entsoe-py-8d79bc.json",
+    "created_at": "2026-08-31T19:46:04Z"
+  }
+}
