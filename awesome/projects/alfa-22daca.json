@@ -1,0 +1,25 @@
+{
+  "name": "Alfa",
+  "description": "Standards-based accessibility conformance testing suite implementing ACT Rules for EN 301 549 and WCAG.",
+  "category": "library",
+  "country": [
+    "Denmark"
+  ],
+  "source": {
+    "platform": "GitHub",
+    "url_repository": "https://github.com/Siteimprove/alfa",
+    "license": "MIT",
+    "language": "HTML"
+  },
+  "owner": {
+    "name": "Siteimprove",
+    "type": "organization",
+    "url_website": "https://siteimprove.com/",
+    "is_a_startup": false
+  },
+  "metadata": {
+    "filename": "alfa-22daca.json",
+    "filepath": "awesome/projects/alfa-22daca.json",
+    "created_at": "2026-09-10T09:19:00Z"
+  }
+}
