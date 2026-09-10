@@ -1,0 +1,25 @@
+{
+  "name": "en16931-cii2ubl",
+  "description": "Converter for EN 16931 electronic invoices from CII to UBL format.",
+  "category": "library",
+  "country": [
+    "Austria"
+  ],
+  "source": {
+    "platform": "GitHub",
+    "url_repository": "https://github.com/phax/en16931-cii2ubl",
+    "license": "Apache-2.0",
+    "language": "Java"
+  },
+  "owner": {
+    "name": "phax",
+    "type": "individual",
+    "url_website": "https://paypal.me/PhilipHelger",
+    "is_a_startup": false
+  },
+  "metadata": {
+    "filename": "en16931-cii2ubl-09926a.json",
+    "filepath": "awesome/projects/en16931-cii2ubl-09926a.json",
+    "created_at": "2026-09-10T09:46:55Z"
+  }
+}
