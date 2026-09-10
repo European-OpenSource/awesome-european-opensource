@@ -1,0 +1,25 @@
+{
+  "name": "EUDI OpenID4VCI Kotlin",
+  "description": "Kotlin implementation of the OpenID for Verifiable Credential Issuance protocol for the EUDI Wallet.",
+  "category": "library",
+  "country": [
+    "Belgium"
+  ],
+  "source": {
+    "platform": "GitHub",
+    "url_repository": "https://github.com/eu-digital-identity-wallet/eudi-lib-jvm-openid4vci-kt",
+    "license": "Apache-2.0",
+    "language": "Kotlin"
+  },
+  "owner": {
+    "name": "eu-digital-identity-wallet",
+    "type": "organization",
+    "url_website": "https://ec.europa.eu/digital-building-blocks/sites/display/EUDIGITALIDENTITYWALLET/EU+Digital+Identity+Wallet+Home",
+    "is_a_startup": false
+  },
+  "metadata": {
+    "filename": "eudi-openid4vci-kotlin-4831a6.json",
+    "filepath": "awesome/projects/eudi-openid4vci-kotlin-4831a6.json",
+    "created_at": "2026-09-10T09:46:29Z"
+  }
+}
