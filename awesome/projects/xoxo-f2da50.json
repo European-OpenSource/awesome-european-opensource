@@ -1,0 +1,25 @@
+{
+  "name": "Xoxo",
+  "description": "Library for .NET to read, write, compare, and convert XBRL reports including ESEF and EBA taxonomies.",
+  "category": "library",
+  "country": [
+    "Finland"
+  ],
+  "source": {
+    "platform": "GitHub",
+    "url_repository": "https://github.com/dgm9704/Xoxo",
+    "license": "LGPL-3.0",
+    "language": "C#"
+  },
+  "owner": {
+    "name": "dgm9704",
+    "type": "individual",
+    "url_website": "https://diwen.social",
+    "is_a_startup": false
+  },
+  "metadata": {
+    "filename": "xoxo-f2da50.json",
+    "filepath": "awesome/projects/xoxo-f2da50.json",
+    "created_at": "2026-09-10T09:50:27Z"
+  }
+}
