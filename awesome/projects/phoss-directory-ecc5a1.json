@@ -1,0 +1,25 @@
+{
+  "name": "phoss Directory",
+  "description": "Official Peppol Directory software.",
+  "category": "app",
+  "country": [
+    "Austria"
+  ],
+  "source": {
+    "platform": "GitHub",
+    "url_repository": "https://github.com/phax/phoss-directory",
+    "license": "Apache-2.0",
+    "language": "Java"
+  },
+  "owner": {
+    "name": "phax",
+    "type": "individual",
+    "url_website": "https://paypal.me/PhilipHelger",
+    "is_a_startup": false
+  },
+  "metadata": {
+    "filename": "phoss-directory-ecc5a1.json",
+    "filepath": "awesome/projects/phoss-directory-ecc5a1.json",
+    "created_at": "2026-09-10T09:54:21Z"
+  }
+}
