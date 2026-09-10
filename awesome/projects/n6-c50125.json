@@ -1,0 +1,26 @@
+{
+  "name": "n6",
+  "description": "Automated handling of data feeds for security teams, developed by CERT Polska.",
+  "category": "app",
+  "country": [
+    "Poland"
+  ],
+  "source": {
+    "platform": "GitHub",
+    "url_repository": "https://github.com/CERT-Polska/n6",
+    "license": "AGPL-3.0",
+    "language": "Python",
+    "url_documentation": "https://n6.readthedocs.io/"
+  },
+  "owner": {
+    "name": "CERT-Polska",
+    "type": "organization",
+    "url_website": "https://cert.pl/",
+    "is_a_startup": false
+  },
+  "metadata": {
+    "filename": "n6-c50125.json",
+    "filepath": "awesome/projects/n6-c50125.json",
+    "created_at": "2026-09-10T09:13:55Z"
+  }
+}
