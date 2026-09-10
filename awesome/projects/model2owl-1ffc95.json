@@ -1,0 +1,25 @@
+{
+  "name": "model2owl",
+  "description": "Tool to transform UML models into OWL ontologies and SHACL shapes for EU procurement data.",
+  "category": "other",
+  "country": [
+    "Luxembourg"
+  ],
+  "source": {
+    "platform": "GitHub",
+    "url_repository": "https://github.com/OP-TED/model2owl",
+    "license": "EUPL-1.2",
+    "language": "HTML"
+  },
+  "owner": {
+    "name": "OP-TED",
+    "type": "organization",
+    "url_website": "https://ted.europa.eu",
+    "is_a_startup": false
+  },
+  "metadata": {
+    "filename": "model2owl-1ffc95.json",
+    "filepath": "awesome/projects/model2owl-1ffc95.json",
+    "created_at": "2026-09-10T09:43:04Z"
+  }
+}
