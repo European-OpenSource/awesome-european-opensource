@@ -1,0 +1,26 @@
+{
+  "name": "ITB JSON Validator",
+  "description": "European Commission validation service for JSON data in EU interoperability testing.",
+  "category": "app",
+  "country": [
+    "Belgium"
+  ],
+  "source": {
+    "platform": "GitHub",
+    "url_repository": "https://github.com/ISAITB/json-validator",
+    "license": "EUPL-1.2",
+    "language": "Other",
+    "url_documentation": "https://www.itb.ec.europa.eu"
+  },
+  "owner": {
+    "name": "ISAITB",
+    "type": "organization",
+    "url_website": "https://www.itb.ec.europa.eu",
+    "is_a_startup": false
+  },
+  "metadata": {
+    "filename": "itb-json-validator-540822.json",
+    "filepath": "awesome/projects/itb-json-validator-540822.json",
+    "created_at": "2026-09-10T10:08:21Z"
+  }
+}
