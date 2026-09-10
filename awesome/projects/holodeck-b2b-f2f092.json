@@ -1,0 +1,26 @@
+{
+  "name": "Holodeck B2B",
+  "description": "AS4 messaging solution implementing OASIS ebMS3 and AS4 profile for EU eDelivery.",
+  "category": "api",
+  "country": [
+    "Netherlands"
+  ],
+  "source": {
+    "platform": "GitHub",
+    "url_repository": "https://github.com/holodeck-b2b/Holodeck-B2B",
+    "license": "GPL-3.0",
+    "language": "Java",
+    "url_documentation": "http://holodeck-b2b.org"
+  },
+  "owner": {
+    "name": "holodeck-b2b",
+    "type": "individual",
+    "url_website": "http://www.holodeck-b2b.org",
+    "is_a_startup": false
+  },
+  "metadata": {
+    "filename": "holodeck-b2b-f2f092.json",
+    "filepath": "awesome/projects/holodeck-b2b-f2f092.json",
+    "created_at": "2026-09-10T09:19:48Z"
+  }
+}
