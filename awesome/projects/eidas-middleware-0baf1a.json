@@ -1,0 +1,25 @@
+{
+  "name": "eIDAS Middleware",
+  "description": "Implementation of the European eIDAS middleware provided under the EUPL 1.2 by Governikus.",
+  "category": "library",
+  "country": [
+    "Germany"
+  ],
+  "source": {
+    "platform": "GitHub",
+    "url_repository": "https://github.com/Governikus/eidas-middleware",
+    "license": "EUPL-1.2",
+    "language": "Java"
+  },
+  "owner": {
+    "name": "Governikus",
+    "type": "organization",
+    "url_website": "https://www.governikus.de",
+    "is_a_startup": false
+  },
+  "metadata": {
+    "filename": "eidas-middleware-0baf1a.json",
+    "filepath": "awesome/projects/eidas-middleware-0baf1a.json",
+    "created_at": "2026-09-10T09:40:38Z"
+  }
+}
