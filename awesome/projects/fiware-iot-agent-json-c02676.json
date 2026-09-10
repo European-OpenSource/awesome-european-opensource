@@ -1,0 +1,26 @@
+{
+  "name": "FIWARE IoT Agent JSON",
+  "description": "IoT Agent for JSON-based protocols with HTTP, MQTT and AMQP transports in FIWARE smart applications.",
+  "category": "library",
+  "country": [
+    "Spain"
+  ],
+  "source": {
+    "platform": "GitHub",
+    "url_repository": "https://github.com/telefonicaid/iotagent-json",
+    "license": "AGPL-3.0",
+    "language": "JavaScript",
+    "url_documentation": "https://fiware-iotagent-json.rtfd.io/"
+  },
+  "owner": {
+    "name": "telefonicaid",
+    "type": "organization",
+    "url_website": "http://www.tid.es/",
+    "is_a_startup": false
+  },
+  "metadata": {
+    "filename": "fiware-iot-agent-json-c02676.json",
+    "filepath": "awesome/projects/fiware-iot-agent-json-c02676.json",
+    "created_at": "2026-09-10T09:18:09Z"
+  }
+}
