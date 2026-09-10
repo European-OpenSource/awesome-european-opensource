@@ -1,0 +1,28 @@
+{
+  "name": "CNIL PIA",
+  "description": "Privacy Impact Assessment tool published by the French data protection authority for GDPR compliance.",
+  "category": "app",
+  "country": [
+    "France"
+  ],
+  "source": {
+    "platform": "GitHub",
+    "url_repository": "https://github.com/LINCnil/pia",
+    "license": "GPL-3.0",
+    "language": "TypeScript"
+  },
+  "owner": {
+    "name": "LINCnil",
+    "type": "organization",
+    "url_website": "http://linc.cnil.fr/",
+    "is_a_startup": false
+  },
+  "metadata": {
+    "filename": "cnil-pia-e15b7d.json",
+    "filepath": "awesome/projects/cnil-pia-e15b7d.json",
+    "created_at": "2026-08-31T19:46:30Z"
+  },
+  "tags": [
+    "gdpr"
+  ]
+}
