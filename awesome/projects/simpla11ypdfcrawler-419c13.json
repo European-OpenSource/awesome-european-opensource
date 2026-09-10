@@ -1,0 +1,24 @@
+{
+  "name": "SimplA11yPDFCrawler",
+  "description": "Crawler that downloads PDFs from websites and analyses their accessibility against EU standards.",
+  "category": "cli",
+  "country": [
+    "Luxembourg"
+  ],
+  "source": {
+    "platform": "GitHub",
+    "url_repository": "https://github.com/accessibility-luxembourg/simplA11yPDFCrawler",
+    "license": "MIT",
+    "language": "Python"
+  },
+  "owner": {
+    "name": "accessibility-luxembourg",
+    "type": "organization",
+    "is_a_startup": false
+  },
+  "metadata": {
+    "filename": "simpla11ypdfcrawler-419c13.json",
+    "filepath": "awesome/projects/simpla11ypdfcrawler-419c13.json",
+    "created_at": "2026-09-10T09:51:43Z"
+  }
+}
