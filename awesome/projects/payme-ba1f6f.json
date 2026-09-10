@@ -1,0 +1,25 @@
+{
+  "name": "payme",
+  "description": "QR code generator for SEPA payments in ASCII and PNG formats.",
+  "category": "cli",
+  "country": [
+    "Belgium"
+  ],
+  "source": {
+    "platform": "GitHub",
+    "url_repository": "https://github.com/jovandeginste/payme",
+    "license": "MIT",
+    "language": "Go"
+  },
+  "owner": {
+    "name": "jovandeginste",
+    "type": "individual",
+    "url_website": "https://jovandeginste.github.io",
+    "is_a_startup": false
+  },
+  "metadata": {
+    "filename": "payme-ba1f6f.json",
+    "filepath": "awesome/projects/payme-ba1f6f.json",
+    "created_at": "2026-09-10T09:28:24Z"
+  }
+}
