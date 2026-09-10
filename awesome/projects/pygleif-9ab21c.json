@@ -1,0 +1,24 @@
+{
+  "name": "pygleif",
+  "description": "Python client for the GLEIF Legal Entity Identifier API used in EU regulatory compliance.",
+  "category": "library",
+  "country": [
+    "Sweden"
+  ],
+  "source": {
+    "platform": "GitHub",
+    "url_repository": "https://github.com/ggravlingen/pygleif",
+    "license": "MIT",
+    "language": "Python"
+  },
+  "owner": {
+    "name": "ggravlingen",
+    "type": "individual",
+    "is_a_startup": false
+  },
+  "metadata": {
+    "filename": "pygleif-9ab21c.json",
+    "filepath": "awesome/projects/pygleif-9ab21c.json",
+    "created_at": "2026-09-10T10:01:01Z"
+  }
+}
