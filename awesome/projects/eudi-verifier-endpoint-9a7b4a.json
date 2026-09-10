@@ -1,0 +1,25 @@
+{
+  "name": "EUDI Verifier Endpoint",
+  "description": "Web application that acts as a Verifier trusted endpoint for the EUDI Wallet.",
+  "category": "api",
+  "country": [
+    "Belgium"
+  ],
+  "source": {
+    "platform": "GitHub",
+    "url_repository": "https://github.com/eu-digital-identity-wallet/eudi-srv-verifier-endpoint",
+    "license": "Apache-2.0",
+    "language": "Kotlin"
+  },
+  "owner": {
+    "name": "eu-digital-identity-wallet",
+    "type": "organization",
+    "url_website": "https://ec.europa.eu/digital-building-blocks/sites/display/EUDIGITALIDENTITYWALLET/EU+Digital+Identity+Wallet+Home",
+    "is_a_startup": false
+  },
+  "metadata": {
+    "filename": "eudi-verifier-endpoint-9a7b4a.json",
+    "filepath": "awesome/projects/eudi-verifier-endpoint-9a7b4a.json",
+    "created_at": "2026-09-10T09:27:35Z"
+  }
+}
