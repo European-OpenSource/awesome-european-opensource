@@ -1,0 +1,25 @@
+{
+  "name": "EUDI Web Issuing",
+  "description": "Python backend for issuing PID, mDL and EAA credentials via OID4VCI for the EUDI Wallet.",
+  "category": "api",
+  "country": [
+    "Belgium"
+  ],
+  "source": {
+    "platform": "GitHub",
+    "url_repository": "https://github.com/eu-digital-identity-wallet/eudi-srv-web-issuing-eudiw-py",
+    "license": "Apache-2.0",
+    "language": "Python"
+  },
+  "owner": {
+    "name": "eu-digital-identity-wallet",
+    "type": "organization",
+    "url_website": "https://ec.europa.eu/digital-building-blocks/sites/display/EUDIGITALIDENTITYWALLET/EU+Digital+Identity+Wallet+Home",
+    "is_a_startup": false
+  },
+  "metadata": {
+    "filename": "eudi-web-issuing-582453.json",
+    "filepath": "awesome/projects/eudi-web-issuing-582453.json",
+    "created_at": "2026-09-10T09:30:59Z"
+  }
+}
