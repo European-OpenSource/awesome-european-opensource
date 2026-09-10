@@ -1,0 +1,24 @@
+{
+  "name": "Dispa-SET",
+  "description": "Unit commitment and optimal dispatch model for the European power system, developed at the JRC.",
+  "category": "library",
+  "country": [
+    "Belgium"
+  ],
+  "source": {
+    "platform": "GitHub",
+    "url_repository": "https://github.com/energy-modelling-toolkit/Dispa-SET",
+    "license": "EUPL-1.2",
+    "language": "Python"
+  },
+  "owner": {
+    "name": "energy-modelling-toolkit",
+    "type": "organization",
+    "is_a_startup": false
+  },
+  "metadata": {
+    "filename": "dispa-set-81486f.json",
+    "filepath": "awesome/projects/dispa-set-81486f.json",
+    "created_at": "2026-09-10T09:19:19Z"
+  }
+}
