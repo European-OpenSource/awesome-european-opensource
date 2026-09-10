@@ -1,0 +1,29 @@
+{
+  "name": "PyKEP",
+  "description": "ESA scientific library providing basic tools for research in interplanetary trajectory design.",
+  "category": "library",
+  "country": [
+    "France"
+  ],
+  "source": {
+    "platform": "GitHub",
+    "url_repository": "https://github.com/esa/pykep",
+    "license": "MPL-2.0",
+    "language": "Python",
+    "url_documentation": "http://esa.github.io/pykep/"
+  },
+  "owner": {
+    "name": "esa",
+    "type": "organization",
+    "url_website": "http://www.esa.int",
+    "is_a_startup": false
+  },
+  "metadata": {
+    "filename": "pykep-988e52.json",
+    "filepath": "awesome/projects/pykep-988e52.json",
+    "created_at": "2026-08-31T19:46:40Z"
+  },
+  "tags": [
+    "space"
+  ]
+}
