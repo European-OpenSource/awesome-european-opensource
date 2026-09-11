@@ -1,0 +1,25 @@
+{
+  "name": "efm-asic",
+  "description": "Generic implementation of ETSI ASiC-E archive containers for EU eDelivery infrastructure.",
+  "category": "library",
+  "country": [
+    "Norway"
+  ],
+  "source": {
+    "platform": "GitHub",
+    "url_repository": "https://github.com/felleslosninger/efm-asic",
+    "license": "BSD-3-Clause",
+    "language": "Java"
+  },
+  "owner": {
+    "name": "felleslosninger",
+    "type": "organization",
+    "url_website": "https://www.digdir.no/",
+    "is_a_startup": false
+  },
+  "metadata": {
+    "filename": "efm-asic-d9ec15.json",
+    "filepath": "awesome/projects/efm-asic-d9ec15.json",
+    "created_at": "2026-09-11T13:11:53Z"
+  }
+}
