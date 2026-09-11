@@ -1,0 +1,26 @@
+{
+  "name": "Procivis One Wallet",
+  "description": "Digital wallet with eIDAS 2.0 compliancy, ISO 18013-5 mdocs, and SD-JWT VC support.",
+  "category": "app",
+  "country": [
+    "Switzerland"
+  ],
+  "source": {
+    "platform": "GitHub",
+    "url_repository": "https://github.com/procivis/one-wallet",
+    "license": "Apache-2.0",
+    "language": "TypeScript",
+    "url_documentation": "https://docs.procivis.ch/"
+  },
+  "owner": {
+    "name": "procivis",
+    "type": "organization",
+    "url_website": "https://procivis.ch",
+    "is_a_startup": false
+  },
+  "metadata": {
+    "filename": "procivis-one-wallet-5853ea.json",
+    "filepath": "awesome/projects/procivis-one-wallet-5853ea.json",
+    "created_at": "2026-09-11T13:11:26Z"
+  }
+}
