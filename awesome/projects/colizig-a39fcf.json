@@ -1,0 +1,25 @@
+{
+  "name": "ColiZig",
+  "description": "A from-scratch Zig inference engine for large MoE models - stream experts from SSD to RAM to VRAM and keep the resident working set small. ColiZig explores a different way to run Mixture-of-Experts models: instead of loading the entire model into memory, it treats expert weights as a tiered working set and streams them between SSD, RAM and opt. VRAM",
+  "category": "ai",
+  "country": [
+    "Italy"
+  ],
+  "source": {
+    "platform": "GitHub",
+    "url_repository": "https://github.com/benmaster82/colizig",
+    "license": "MIT",
+    "language": "Other",
+    "url_documentation": "https://github.com/benmaster82/colizig/blob/main/README.md"
+  },
+  "owner": {
+    "name": "Benito Mallamaci",
+    "type": "individual",
+    "is_a_startup": false
+  },
+  "metadata": {
+    "filename": "colizig-a39fcf.json",
+    "filepath": "awesome/projects/colizig-a39fcf.json",
+    "created_at": "2026-09-11T13:12:24Z"
+  }
+}
